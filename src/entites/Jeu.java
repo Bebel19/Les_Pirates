@@ -19,7 +19,7 @@ public class Jeu {
         return 0;
     }
 
-    public void deplacerPirate(Pirate pirate, int valeurDe) {
+    public void deplacerPirate(Pirate pirate, int valeur) {
         // déplacer le pirate sur le plateau
     }
 
