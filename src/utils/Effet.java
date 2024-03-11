@@ -1,5 +1,5 @@
 package utils;
 
 public enum Effet {
-    RHUM, ARME // effets possibles
+    NEUTRE,RHUM, ARME // effets possibles pour une case
 }

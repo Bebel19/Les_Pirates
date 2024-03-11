@@ -1,13 +1,18 @@
 package entites;
 
 public class Jeu {
-    private static final int NOMBRE_JOUEURS = 2; // le nombre de joueurs est fixé à 2
+    private int nbJoueurs = 2;
     private Pirate[] listePirates; // tableau pour stocker les pirates
     private Plateau plateau; // le plateau de jeu
 
     public Jeu() {
-        this.listePirates = new Pirate[NOMBRE_JOUEURS]; // initialisation du tableau des pirates
+        this.listePirates = new Pirate[nbJoueurs]; // initialisation du tableau des pirates
         this.plateau = new Plateau(); // initialisation du plateau de jeu
+    }
+    public Jeu(int nbJoueurs) {
+        this.listePirates = new Pirate[nbJoueurs]; // initialisation du tableau des pirates
+        this.plateau = new Plateau(); // initialisation du plateau de jeu
+        this.nbJoueurs = nbJoueurs;
     }
 
     public void start() {

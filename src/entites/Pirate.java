@@ -7,6 +7,7 @@ public class Pirate {
     private String nom;
     private Couleur couleur; // Enumération pour les couleurs
     private Case caseActuelle;
+    private Arme arme;
 
     public int getPV() {
         return PV;
@@ -25,8 +26,7 @@ public class Pirate {
     }
 
     public Arme getArme() {
-        // retourner l'arme du pirate
-        return null;
+        return arme;
     }
 
 }
