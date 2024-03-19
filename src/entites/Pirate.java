@@ -6,7 +6,7 @@ public class Pirate {
     private int pv = 5; // points de vie initiaux
     private String nom;
     private Couleur couleur; // Enumération pour les couleurs
-    private Case caseActuelle;
+    private int position = 1;
     private Arme arme;
     
 	public Pirate(String nom, Couleur couleur) {
@@ -26,10 +26,13 @@ public class Pirate {
         return couleur;
     }
 
-    public Case getCase() {
-        return caseActuelle;
+    public int getPosition() {
+        return position;
     }
-
+    
+    public void setPosition(int destination) {
+    	position = destination;
+    }
     public Arme getArme() {
         return arme;
     }

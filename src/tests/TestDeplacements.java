@@ -3,17 +3,22 @@ package tests;
 import affichage.AffichageTerminal;
 import entites.Plateau;
 import utils.Couleur;
+import entites.Jeu;
 import entites.Pirate;
 import utils.Couleur;
 
 public class TestDeplacements {
 	public static void main(String[] args) {
 		
+		Jeu jeu = new Jeu();
 		AffichageTerminal aff = new AffichageTerminal();
-		Plateau plateau = new Plateau();
 		Pirate franky = new Pirate("Franky", Couleur.ROUGE) ;
 		
 		
+		for (int i = 0; i<60; i++) {
+			aff.afficherPosition(franky.getPosition());
+			jeu.deplacerPirate(franky, 3);
+			}
 		
 	}
 }

@@ -19,7 +19,7 @@ public class Jeu {
     }
 
     public void start() {
-        // démarrage du jeu
+        //TODO démarrage du jeu
     }
 
     public int lanceDe() {
@@ -27,9 +27,15 @@ public class Jeu {
         return (1 + random.nextInt(5));
     }
 
-    public void deplacerPirate(Pirate pirate, int valeur) {
-      //logique déplacement
+    public void deplacerPirate(Pirate pirate, int valeurDe) {
+        // Calculer la nouvelle position en tenant compte de la position actuelle du pirate
+        int nouvellePosition = pirate.getPosition() + valeurDe;
+        
+        pirate.setPosition(plateau.calculPosition(nouvellePosition));
+        
     }
+
+
 
     public void appliquerEffetCase(Case casePlateau) {
         // appliquer l'effet de la case sur le pirate

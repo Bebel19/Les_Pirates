@@ -12,5 +12,8 @@ public class AffichageTerminal {
 		else 
 			System.out.println("La case à afficher est null ");
 	}
-
+	public void afficherPosition(int positionAfficher) {
+		System.out.println("Numéro case = " + positionAfficher);
+		
+	}
 }
