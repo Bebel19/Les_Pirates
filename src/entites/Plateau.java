@@ -44,21 +44,21 @@ public class Plateau {
     
     private void genererPlateau() {
         Random random = new Random();
-        this.listeCases[0] = new Case(1, Effet.START);
-        this.listeCases[NOMBRE_CASES - 1] = new Case(NOMBRE_CASES, Effet.WIN);
+        this.listeCases[0] = null;
+        this.listeCases[NOMBRE_CASES - 1] = new CaseWin(NOMBRE_CASES);
 
         for (int i = 1; i < (NOMBRE_CASES - 1); i++) {
             int test = random.nextInt(3) + 1;
 
             switch (test) {
                 case 1:
-                    this.listeCases[i] = new Case(i + 1, Effet.RHUM);
+                    this.listeCases[i] = new CaseRhum(i + 1);
                     break;
                 case 2:
-                    this.listeCases[i] = new Case(i + 1, Effet.ARME);
+                    this.listeCases[i] = new CaseArme(i + 1,Arme.obtenirArmeAleatoire());
                     break;
                 case 3:
-                    this.listeCases[i] = new Case(i + 1, Effet.NEUTRE);
+                    this.listeCases[i] = null;
                     break;
                 default:
                     break;

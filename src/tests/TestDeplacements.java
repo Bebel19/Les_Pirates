@@ -1,11 +1,9 @@
 package tests;
 
 import affichage.AffichageTerminal;
-import entites.Plateau;
 import utils.Couleur;
 import entites.Jeu;
 import entites.Pirate;
-import utils.Couleur;
 
 public class TestDeplacements {
 	public static void main(String[] args) {
