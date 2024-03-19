@@ -1,17 +1,20 @@
 package entites;
 
+import java.util.Random;
+
 public class Jeu {
-    private int nbJoueurs = 2;
+    private int nbJoueurs;
     private Pirate[] listePirates; // tableau pour stocker les pirates
-    private Plateau plateau; // le plateau de jeu
+    private Plateau plateau = new Plateau(); // initialisation du plateau de jeu
+    private Random random; // Ajout de l'objet Random
 
     public Jeu() {
+    	
         this.listePirates = new Pirate[nbJoueurs]; // initialisation du tableau des pirates
-        this.plateau = new Plateau(); // initialisation du plateau de jeu
+        this.nbJoueurs = 2;
     }
     public Jeu(int nbJoueurs) {
         this.listePirates = new Pirate[nbJoueurs]; // initialisation du tableau des pirates
-        this.plateau = new Plateau(); // initialisation du plateau de jeu
         this.nbJoueurs = nbJoueurs;
     }
 
@@ -20,12 +23,12 @@ public class Jeu {
     }
 
     public int lanceDe() {
-        // lancer de dé et retourner le résultat
-        return 0;
+    	
+        return (1 + random.nextInt(5));
     }
 
     public void deplacerPirate(Pirate pirate, int valeur) {
-        // déplacer le pirate sur le plateau
+      //logique déplacement
     }
 
     public void appliquerEffetCase(Case casePlateau) {

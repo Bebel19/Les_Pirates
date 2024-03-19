@@ -1,5 +1,5 @@
 package utils;
 
 public enum Effet {
-    NEUTRE,RHUM, ARME, WIN
+    START,NEUTRE,RHUM, ARME, WIN
 }
