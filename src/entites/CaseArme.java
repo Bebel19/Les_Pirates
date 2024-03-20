@@ -1,5 +1,6 @@
 package entites;
 
+import utils.Arme;
 import utils.Effet;
 
 public class CaseArme extends Case {

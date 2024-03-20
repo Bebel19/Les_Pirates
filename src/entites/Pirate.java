@@ -1,5 +1,6 @@
 package entites;
 
+import utils.Arme;
 import utils.Couleur;
 
 public class Pirate {

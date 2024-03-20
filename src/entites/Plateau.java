@@ -2,6 +2,7 @@ package entites;
 
 import java.util.Random;
 
+import utils.Arme;
 import utils.Effet;
 
 public class Plateau {
