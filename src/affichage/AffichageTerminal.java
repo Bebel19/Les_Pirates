@@ -18,7 +18,14 @@ public class AffichageTerminal {
 	}
 	
 	public void afficherResultatDe(int resultatDe) {
-		System.out.println("Le pirate avance de " + resultatDe + " cases.");
 		
+		if (resultatDe >1)
+			System.out.println("Le pirate avance de " + resultatDe + " cases.");
+		
+		else if (resultatDe == 1)
+			System.out.println("Le pirate avance de " + resultatDe + " case.");
+		
+		else if (resultatDe <= 0)
+			System.out.println("Le dé renvois une valeur négative ou 0.");
 	}
 }
