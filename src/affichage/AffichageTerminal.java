@@ -16,4 +16,9 @@ public class AffichageTerminal {
 		System.out.println("Numéro case = " + positionAfficher);
 		
 	}
+	
+	public void afficherResultatDe(int resultatDe) {
+		System.out.println("Le pirate avance de " + resultatDe + " cases.");
+		
+	}
 }
