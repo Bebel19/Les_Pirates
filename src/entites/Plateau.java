@@ -1,16 +1,18 @@
 package entites;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import utils.Arme;
-import utils.Effet;
 
 public class Plateau {
     private static final int NOMBRE_CASES = 30; // le nombre de cases du plateau est fixé à 30
-    private Case[] listeCases; // tableau pour stocker les cases
+    private Map<Integer, Case> cases; // Utilisation d'une Map pour stocker les cases
 
     public Plateau() {
-        this.listeCases = new Case[NOMBRE_CASES]; // initialisation du tableau des cases
+    	cases = new HashMap<>();
         // initialisation des cases...
         genererPlateau();
     }
@@ -21,11 +23,11 @@ public class Plateau {
 
     public Case getCase(int numero) {
         // retourner la case correspondant au numéro
-        return listeCases[numero];
+    	return cases.get(numero);
     }
     
-    public Case[] getListeCases() {
-    	return listeCases;
+    public Collection<Case> getCases() {
+        return cases.values();
     }
     
     public int calculPosition(int nouvellePosition ) {
@@ -45,26 +47,25 @@ public class Plateau {
     
     private void genererPlateau() {
         Random random = new Random();
-        this.listeCases[0] = null;
-        this.listeCases[NOMBRE_CASES - 1] = new CaseWin(NOMBRE_CASES);
+        cases.put(0, null); 
 
-        for (int i = 1; i < (NOMBRE_CASES - 1); i++) {
+        for (int i = 1; i < NOMBRE_CASES - 1; i++) {
             int test = random.nextInt(3) + 1;
 
             switch (test) {
                 case 1:
-                    this.listeCases[i] = new CaseRhum(i + 1);
+                    cases.put(i, new CaseRhum(i));
                     break;
                 case 2:
-                    this.listeCases[i] = new CaseArme(i + 1,Arme.obtenirArmeAleatoire());
-                    break;
-                case 3:
-                    this.listeCases[i] = null;
+                    cases.put(i, new CaseArme(i, Arme.obtenirArmeAleatoire()));
                     break;
                 default:
+                    cases.put(i, null);
                     break;
             }
         }
+
+        cases.put(NOMBRE_CASES - 1, new CaseWin(NOMBRE_CASES - 1)); // La derni�re case est une case gagnante
     }
 
     
