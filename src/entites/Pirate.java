@@ -13,6 +13,7 @@ public class Pirate {
 	public Pirate(String nom, Couleur couleur) {
 		this.nom = nom;
 		this.couleur = couleur;	
+		this.arme = Arme.POING;
 	}
     
     public int getPv() {
