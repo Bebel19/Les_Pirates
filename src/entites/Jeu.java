@@ -1,5 +1,10 @@
 package entites;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import affichage.AffichageTerminal;
 import utils.PirateNom;
 import utils.Couleur;
@@ -27,21 +32,35 @@ public class Jeu {
 		this.aff = new AffichageTerminal();
 	}
 
-	public void start() {
-		choisirJoueursEtPirates();
-		while (!jeuTermine) {
-			for (Pirate pirate : listePirates) {
-				if (jeuTermine) {
-					break;
-				}
-				aff.afficherDebutTour(pirate);
-				int lance = de.lancerDe();
-				aff.afficherLanceDe(pirate, lance);
-				deplacerPirate(pirate, lance);
 
-			}
-		}
+
+	public void start() {
+	    choisirJoueursEtPirates();
+	    while (!jeuTermine) {
+	        Set<Pirate> piratesAyantCombattu = new HashSet<>();
+	        for (Pirate pirate : listePirates) {
+	            if (jeuTermine) {
+	                break;
+	            }
+	            if (!piratesAyantCombattu.contains(pirate)) {
+	                aff.afficherDebutTour(pirate);
+	                int lance = de.lancerDe();
+	                aff.afficherLanceDe(pirate, lance);
+	                deplacerPirate(pirate, lance);
+	                for (Pirate autrePirate : listePirates) {
+	                    if (autrePirate != pirate && !piratesAyantCombattu.contains(autrePirate) && Math.abs(autrePirate.getPosition() - pirate.getPosition()) <= 2) {
+	                        if (engagerDuel(pirate, autrePirate)&& !jeuTermine) {
+	                            piratesAyantCombattu.add(pirate);
+	                            piratesAyantCombattu.add(autrePirate);
+	                            break;
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
 	}
+
 	
 	public Pirate[] getPirates() {
 		return listePirates;
@@ -73,12 +92,8 @@ public class Jeu {
 
 			aff.afficherCaseNormale(nouvellePosition);
 		}
-		for (Pirate autrePirate : listePirates) {
-			if (autrePirate != pirate && Math.abs(autrePirate.getPosition() - pirate.getPosition()) <= 2) {
-				engagerDuel(pirate, autrePirate);
-				break;
-			}
-		}
+
+
 	}
 
 	public void terminerJeu(Pirate pirate) {
@@ -99,7 +114,7 @@ public class Jeu {
 		}
 	}
 
-	public void engagerDuel(Pirate pirate1, Pirate pirate2) {
+	public boolean engagerDuel(Pirate pirate1, Pirate pirate2) {
 
 		aff.afficherMessage("Un duel est engagé entre " + pirate1.getNom() + " et " + pirate2.getNom() + ".");
 
@@ -123,27 +138,26 @@ public class Jeu {
 		} else {
 			aff.afficherMessage("Le duel se termine par un match nul.");
 		}
+		return true;
 
 	}
 
 	public void verifierEtRetirerPiratesMorts() {
-		int nbVivants = 0;
+	    // Créer une liste temporaire pour les pirates vivants
+	    List<Pirate> piratesVivants = new ArrayList<>();
 
-		for (Pirate pirate : listePirates) {
-			if (!pirate.estMort()) {
-				nbVivants++;
-			}
-		}
+	    // Parcourir tous les pirates et ajouter les vivants à la liste temporaire
+	    for (Pirate pirate : listePirates) {
+	        if (!pirate.estMort()) {
+	            piratesVivants.add(pirate);
+	        } else {
+	            // Gérer la logique liée à la mort du pirate, par exemple afficher un message
+	            System.out.println("Le pirate " + pirate.getNom() + " est mort.");
+	        }
+	    }
 
-		Pirate[] piratesVivants = new Pirate[nbVivants];
-
-		int index = 0;
-		for (Pirate pirate : listePirates) {
-			if (!pirate.estMort()) {
-				piratesVivants[index++] = pirate;
-			}
-		}
-
-		listePirates = piratesVivants;
+	    // Convertir la liste des pirates vivants en un nouveau tableau et le réaffecter à listePirates
+	    listePirates = piratesVivants.toArray(new Pirate[0]);
 	}
+
 }
