@@ -3,13 +3,13 @@ package entites;
 import java.util.Random;
 
 public class De {
-    private Random random;
+	private Random random;
 
-    public De() {
-        this.random = new Random();
-    }
+	public De() {
+		this.random = new Random();
+	}
 
-    public int lancerDe() {
-        return 1 + random.nextInt(6);
-    }
+	public int lancerDe() {
+		return 1 + random.nextInt(6);
+	}
 }

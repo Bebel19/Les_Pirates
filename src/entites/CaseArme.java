@@ -1,22 +1,30 @@
 package entites;
 
+import affichage.AffichageTerminal;
 import utils.Arme;
 import utils.Effet;
 
 public class CaseArme extends Case {
-    private Arme arme; // Attribut spécifique pour la case Arme
+	private Arme arme;
+	private AffichageTerminal aff = new AffichageTerminal();
 
-    public CaseArme(int numero, Arme arme) {
-        super(numero, Effet.ARME);
-        this.arme = arme;
-    }
+	public CaseArme(int numero, Arme arme) {
+		super(numero, Effet.ARME);
+		this.arme = arme;
+	}
 
-    @Override
-    public void appliquerEffet(Pirate pirate) {
-        // Logique spécifique pour attribuer l'arme au pirate
-    }
-    
-    public Arme getArme() {
-        return arme;
-    }
+	@Override
+	public void appliquerEffet(Pirate pirate, Jeu jeu) {
+		if (pirate.getArme() == null || pirate.getArme().getForce() < this.getArme().getForce()) {
+			pirate.setArme(this.getArme()); // Le pirate prend la nouvelle arme
+			aff.afficherChangementArme(pirate, this.getArme());
+		}
+		else
+			aff.afficherMessage("Le pirate ne prend pas l'arme");
+	}
+
+	// Getters et Setters pour arme
+	public Arme getArme() {
+		return this.arme;
+	}
 }

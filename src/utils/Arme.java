@@ -1,36 +1,36 @@
 package utils;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public enum Arme {
-    POING("Poing", 1),
-    SABRE("Sabre", 3),
-    PISTOLET("Pistolet", 5),
-    MOUSQUET("Mousquet", 7);
+	POING("Poing", 1), SABRE("Sabre", 3), PISTOLET("Pistolet", 5), MOUSQUET("Mousquet", 7);
 
-    private final String nom;
-    private final int force;
+	private final String nom;
+	private final int force;
 
-    // Constructeur privé pour l'énumération
-    Arme(String nom, int force) {
-        this.nom = nom;
-        this.force = force;
-    }
 
-    // Méthode pour obtenir le nom de l'arme
-    public String getNom() {
-        return nom;
-    }
+	Arme(String nom, int force) {
+		this.nom = nom;
+		this.force = force;
+	}
 
-    // Méthode pour obtenir la force de l'arme
-    public int getForce() {
-        return force;
-    }
-    
-    // Méthode statique pour obtenir une arme aléatoire
-    public static Arme obtenirArmeAleatoire() {
-        Random random = new Random();
-        Arme[] armes = Arme.values();
-        return armes[random.nextInt(armes.length)];
-    }
+
+	public String getNom() {
+		return nom;
+	}
+
+
+	public int getForce() {
+		return force;
+	}
+
+
+	public static Arme obtenirArmeAleatoire() {
+		Random random = new Random();
+		List<Arme> armesPossibles = Arrays.asList(values());
+		armesPossibles = armesPossibles.stream().filter(arme -> arme != POING).toList();
+		return armesPossibles.get(random.nextInt(armesPossibles.size()));
+	}
 }
