@@ -27,10 +27,14 @@
 ```shell
 javac --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -d bin src/**/*.java
 
+```
+
 ```shell
 ## Pour la version terminal 
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStart
+```
 
 ```shell
 ## Pour la version javaFX (beta)
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu
+```
