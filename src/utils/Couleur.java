@@ -1,15 +1,17 @@
 package utils;
 
 public enum Couleur {
-	ROUGE("\u001B[31m"), BLEU("\u001B[34m"), NOIR("\u001B[30m"), VERT("\u001B[32m"), ROSE("\u001B[35m"),
-	VIOLET("\u001B[35m"), JAUNE("\u001B[33m"), ORANGE("\u001B[33m"), 
+	ROUGE("rouge","\u001B[31m"), BLEU("bleu","\u001B[34m"), NOIR("noir","\u001B[30m"), VERT("vert","\u001B[32m"), ROSE("rose","\u001B[35m"),
+	VIOLET("violet","\u001B[35m"), JAUNE("jaune","\u001B[33m"), ORANGE("orange","\u001B[33m"), 
 																	
-	BLANC("\u001B[37m"), GRIS("\u001B[90m");
+	BLANC("blanc","\u001B[37m"), GRIS("gris","\u001B[90m");
 
 	private final String code;
+	private final String nom;
 
-	Couleur(String code) {
+	Couleur(String nom,String code) {
 		this.code = code;
+		this.nom = nom;
 	}
 
 	public String getCode() {
@@ -18,6 +20,10 @@ public enum Couleur {
 
 	@Override
 	public String toString() {
-		return code + name() + "\u001B[0m"; 
+		return nom; 
+	}
+
+	public String getNom() {
+		return nom;
 	}
 }

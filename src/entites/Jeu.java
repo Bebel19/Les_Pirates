@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import affichage.AffichageJavaFX;
 import affichage.AffichageTerminal;
 import utils.PirateNom;
 import utils.Couleur;
@@ -15,6 +16,7 @@ public class Jeu {
 	private Plateau plateau = new Plateau();
 	private De de;
 	private AffichageTerminal aff;
+	private AffichageJavaFX affFX;
 	private boolean jeuTermine = false;
 
 	public Jeu() {

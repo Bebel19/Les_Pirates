@@ -13,7 +13,7 @@ import utils.Couleur;
 import utils.Effet;
 import utils.PirateNom;
 
-public class AffichageTerminal {
+public class AffichageTerminal implements IAffichage{
 	private Scanner scanner = new Scanner(System.in);
 	private List<PirateNom> piratesDisponibles = new ArrayList<>(List.of(PirateNom.values()));
 	private List<Couleur> couleursDisponibles = new ArrayList<>(List.of(Couleur.values()));
@@ -131,6 +131,30 @@ public class AffichageTerminal {
 	public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
 		System.out.println(pirate.getNom() + " trouve " + nouvelleArme.getNom() + " avec une force de "
 				+ nouvelleArme.getForce() + " et décide de la prendre.");
+	}
+
+	@Override
+	public void afficherPlateau() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void afficherJoueurs() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void afficherStart() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lancerSelectionJoueurs() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

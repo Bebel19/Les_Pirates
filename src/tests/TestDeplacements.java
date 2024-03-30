@@ -15,7 +15,7 @@ public class TestDeplacements {
 		De de = new De();
 
 		for (int i = 0; i < 60; i++) {
-			aff.afficherPosition(franky.getPosition(),jeu.getPirates()[franky.getPosition()]);
+			//aff.afficherPosition(franky.getPosition(),jeu.getPirates()[franky.getPosition()]);
 			jeu.deplacerPirate(franky, de.lancerDe());
 		}
 
