@@ -13,7 +13,7 @@ public class CaseRhum extends Case {
 	public void appliquerEffet(Pirate pirate, Jeu jeu) {
 		De de = new De();
 		AffichageTerminal aff = new AffichageTerminal();
-		int valRecul =1;
+		int valRecul =de.lancerDe();
 		aff.afficherIvresse(valRecul);
 		jeu.deplacerPirate(pirate, -valRecul);
 		
