@@ -100,6 +100,42 @@ public class JeuTest {
             public void afficherPosition(int positionAfficher, Case caseCourante) {
                 // Ne rien faire dans ce test
             }
+
+			@Override
+			public void afficherGagnant(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherDebutTour(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherFinTour(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public int demanderNombreJoueurs() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public PirateNom choisirPirate() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Couleur choisirCouleur() {
+				// TODO Auto-generated method stub
+				return null;
+			}
         };
 
         // Créer un objet Jeu à tester
@@ -129,6 +165,42 @@ public class JeuTest {
                 // Afficher la position pour le test
                 System.out.println("Position affichée : " + positionAfficher);
             }
+
+			@Override
+			public void afficherGagnant(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherDebutTour(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherFinTour(Pirate pirate) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public int demanderNombreJoueurs() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public PirateNom choisirPirate() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Couleur choisirCouleur() {
+				// TODO Auto-generated method stub
+				return null;
+			}
         };
 
         // Créer un objet Jeu à tester
