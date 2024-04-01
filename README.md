@@ -30,11 +30,13 @@ javac --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls
 ```
 
 ```shell
-## Pour la version terminal 
+## Pour la version terminal dans la branche main
+
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStart
 ```
 
 ```shell
-## Pour la version javaFX (beta)
+## Pour la version javaFX (beta) dans la branche JavaFX
+
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu
 ```
