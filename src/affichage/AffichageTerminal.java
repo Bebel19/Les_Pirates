@@ -7,17 +7,19 @@ import java.util.Scanner;
 import entites.Case;
 import entites.CaseArme;
 import entites.CaseRhum;
+import entites.Jeu;
 import entites.Pirate;
 import utils.Arme;
 import utils.Couleur;
-import utils.Effet;
 import utils.PirateNom;
 
 public class AffichageTerminal implements IAffichage{
 	private Scanner scanner = new Scanner(System.in);
 	private List<PirateNom> piratesDisponibles = new ArrayList<>(List.of(PirateNom.values()));
 	private List<Couleur> couleursDisponibles = new ArrayList<>(List.of(Couleur.values()));
-
+	private Jeu jeu;
+	
+	
 	public void afficherCase(Case caseAfficher) {
 		if (caseAfficher == null) {
 			System.out.println("La case à afficher est vide.");
@@ -151,10 +153,35 @@ public class AffichageTerminal implements IAffichage{
 		
 	}
 
+
+
 	@Override
-	public void lancerSelectionJoueurs() {
-		// TODO Auto-generated method stub
-		
+	public void setOnSelectionComplete(SelectionCompleteCallback callback) {
+	    // Pas nécessaire pour AffichageTerminal car les interactions sont synchrones
 	}
+
+	@Override
+	public void lancerSelectionJoueurs(SelectionCompleteCallback callback) {
+		    List<Pirate> listePirates = new ArrayList<>();
+		    int nombreJoueurs = demanderNombreJoueurs();
+
+		    for (int i = 0; i < nombreJoueurs; i++) {
+		        PirateNom pirateNomChoisi = choisirPirate();
+		        Couleur couleurChoisie = choisirCouleur();
+		        Pirate pirate = new Pirate(pirateNomChoisi.toString(), couleurChoisie);
+		        listePirates.add(pirate);
+		    }
+
+		  
+			jeu.setPirates(listePirates);
+		}
+
+	public void setJeu(Jeu jeu) {
+	    this.jeu = jeu;
+	}
+
+
+
+
 
 }

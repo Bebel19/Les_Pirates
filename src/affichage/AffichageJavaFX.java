@@ -13,6 +13,12 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.image.Image;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
 import entites.Case;
 import entites.CaseArme;
 import entites.Jeu;
@@ -29,15 +35,28 @@ public class AffichageJavaFX implements IAffichage {
 	private Label messageLabel; // Déclaration du Label pour les messages
 	private VBox root;
 	private Stage primaryStage;
+	private Consumer<List<Pirate>> onSelectionComplete;
 	private Jeu jeu;
+	private SelectionCompleteCallback selectionCompleteCallback;
 
-	public AffichageJavaFX(Stage primaryStage, Jeu jeu) {
+	public AffichageJavaFX(Stage primaryStage) {
 		// Initialisation du Label pour les messages
 		messageLabel = new Label();
 		messageLabel.setText("Bienvenue !"); // Texte initial
 		this.primaryStage = primaryStage;
 		initUI();
-		this.jeu = jeu;
+	}
+	
+
+
+	@Override
+	public void setOnSelectionComplete(SelectionCompleteCallback callback) {
+	    this.selectionCompleteCallback = callback;
+	}
+
+	
+	public void setJeu(Jeu jeu) {
+	    this.jeu = jeu;
 	}
 
 	private void initUI() {
@@ -85,59 +104,59 @@ public class AffichageJavaFX implements IAffichage {
 		startButton.setStyle("-fx-background-color: #4CAF50;");
 		startButton.setPrefHeight(80);
 		startButton.setPrefWidth(200);
-		startButton.setOnAction(e -> lancerSelectionJoueurs());
+		startButton.setOnAction(e -> jeu.start());
 
 		root.getChildren().clear();
 		root.getChildren().addAll(imageView, gameNameLabel, startButton);
 		root.setAlignment(Pos.CENTER);}
 
+	// Méthode pour définir le callback depuis l'extérieur
+	public void setOnSelectionComplete(Consumer<List<Pirate>> callback) {
+	    this.onSelectionComplete = callback;
+	}
+
 	@Override
-	public void lancerSelectionJoueurs() {
-	    VBox layout = new VBox(10); // Espace vertical entre les éléments
-	    layout.setAlignment(Pos.CENTER); // Centre les éléments dans le VBox
-	    
-	    // Titre pour la sélection des joueurs
-	    Text titre = new Text("Sélection des joueurs");
-	    titre.setFont(Font.font("Arial", FontWeight.BOLD, 24));
-	    layout.getChildren().add(titre);
-	    
-	    // Pour chaque pirate dans PirateNom, créer une ligne avec son image et un ComboBox pour les couleurs
-	    for (PirateNom pirateNom : PirateNom.values()) {
-	        
-	    	
-	    	HBox lignePirate = new HBox(10); // Espace horizontal entre les éléments
-	        lignePirate.setAlignment(Pos.CENTER_LEFT);
-	        
-	        // Charger et afficher l'image du pirate
-	        Image image = new Image(getClass().getResourceAsStream("/ressources/images/" + pirateNom.toString().toLowerCase() + ".png"));
-	        ImageView imageView = new ImageView(image);
-	        imageView.setFitHeight(50); // Hauteur de l'image
-	        imageView.setFitWidth(50); // Largeur de l'image
-	        
-	        // Créer un ComboBox pour les couleurs
-	        ComboBox<Couleur> comboBoxCouleurs = new ComboBox<>();
-	        comboBoxCouleurs.getItems().addAll(Couleur.values());
-	        
-	        // Ajouter un CheckBox pour sélectionner le pirate
-	        CheckBox checkBox = new CheckBox(pirateNom.toString());
-	        
-	        lignePirate.getChildren().addAll(checkBox, imageView, comboBoxCouleurs);
-	        layout.getChildren().add(lignePirate);
-	    }
-	    
-	    // Bouton pour valider la sélection
-	    Button btnValider = new Button("Valider choix");
-	    btnValider.setOnAction(event -> {
-	        // Ici, vous devriez collecter les informations des sélections,
-	        // mettre à jour jeu.pirateListe, jeu.nbJoueurs et ensuite afficher le plateau de jeu.
+	public void lancerSelectionJoueurs(SelectionCompleteCallback callback) {
+	    Platform.runLater(() -> {
+	        Stage stage = new Stage();
+	        VBox layout = new VBox(10);
+	        layout.setAlignment(Pos.CENTER);
+
+	        List<HBox> lignesPirates = new ArrayList<>();
+	        for (PirateNom pirateNom : PirateNom.values()) {
+	            HBox lignePirate = new HBox(10);
+	            lignePirate.setAlignment(Pos.CENTER_LEFT);
+
+	            Image image = new Image(getClass().getResourceAsStream("/images/" + pirateNom.toString().toLowerCase() + ".png"));
+	            ImageView imageView = new ImageView(image);
+	            imageView.setFitHeight(50);
+	            imageView.setFitWidth(50);
+
+	            ComboBox<Couleur> comboBoxCouleurs = new ComboBox<>();
+	            comboBoxCouleurs.getItems().addAll(Couleur.values());
+
+	            CheckBox checkBox = new CheckBox(pirateNom.toString());
+
+	            lignePirate.getChildren().addAll(checkBox, imageView, comboBoxCouleurs);
+	            lignesPirates.add(lignePirate);
+	        }
+
+	        Button btnValider = new Button("Valider choix");
+	        btnValider.setOnAction(event -> {
+	            List<Pirate> selectedPirates = // Logique pour récupérer les pirates sélectionnés
+	            if (selectionCompleteCallback != null) {
+	                selectionCompleteCallback.onSelectionComplete(selectedPirates);
+	            }
+	            stage.close(); // Fermer la fenêtre après la sélection
+	        });
+
+	        layout.getChildren().addAll(lignesPirates);
+	        layout.getChildren().add(btnValider);
+
+	        Scene scene = new Scene(layout, 400, 600);
+	        stage.setScene(scene);
+	        stage.showAndWait();
 	    });
-	    
-	    layout.getChildren().add(btnValider);
-	    
-	    // Mettre à jour la scène principale avec ce nouveau layout
-	    Scene scene = new Scene(layout, 400, 600);
-	    primaryStage.setScene(scene);
-	    primaryStage.show();
 	}
 
 
@@ -212,5 +231,19 @@ public class AffichageJavaFX implements IAffichage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void afficherPosition(int nouvellePosition, Case caseCourante) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+
+
+
 
 }

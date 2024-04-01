@@ -47,7 +47,7 @@ public class Plateau {
 		Random random = new Random();
 		cases.put(0, null);
 
-		for (int i = 1; i < NOMBRE_CASES - 1; i++) {
+		for (int i = 1; i < NOMBRE_CASES; i++) {
 			int test = random.nextInt(3) + 1;
 
 			switch (test) {
@@ -63,7 +63,7 @@ public class Plateau {
 			}
 		}
 
-		cases.put(NOMBRE_CASES - 1, new CaseWin(NOMBRE_CASES - 1));
+		cases.put(NOMBRE_CASES , new CaseWin(NOMBRE_CASES ));
 
 	}
 }

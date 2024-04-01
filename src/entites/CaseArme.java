@@ -23,7 +23,7 @@ public class CaseArme extends Case {
 			aff.afficherMessage("Le pirate ne prend pas l'arme");
 	}
 
-	// Getters et Setters pour arme
+
 	public Arme getArme() {
 		return this.arme;
 	}

@@ -45,7 +45,6 @@ public class Pirate {
         if (this.pv < 0) {
             this.pv = 0;
         }
-        // TODO gerer la mort
     }
 	public void setArme(Arme nouvelleArme) {
 		this.arme = nouvelleArme;
