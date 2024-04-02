@@ -36,7 +36,7 @@ java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,
 ```
 
 ```shell
-## Pour la version javaFX (beta) dans la branche JavaFX
+## Pour la version javaFX (beta) dans la branche Les_Pirates_JavaFX
 
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu
 ```
