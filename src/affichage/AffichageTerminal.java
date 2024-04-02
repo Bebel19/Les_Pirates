@@ -70,67 +70,85 @@ public class AffichageTerminal implements IAffichage {
 
 	@Override
 	public int demanderNombreJoueurs() {
-		int maxJoueurs = Math.min(PirateNom.values().length, Couleur.values().length);
-		System.out.print("Combien de joueurs ? (au moins 2 et au maximum " + maxJoueurs + ") ");
-		int nombreJoueurs = scanner.nextInt();
-		while (nombreJoueurs < 2 || nombreJoueurs > maxJoueurs) {
-			System.out.println("Le nombre de joueurs doit être entre 2 et " + maxJoueurs + ". Veuillez réessayer.");
-			nombreJoueurs = scanner.nextInt();
-		}
-		return nombreJoueurs;
+	    int maxJoueurs = Math.min(PirateNom.values().length, Couleur.values().length);
+	    System.out.print("Combien de joueurs ? (au moins 2 et au maximum " + maxJoueurs + ") ");
+	    while (!scanner.hasNextInt()) {
+	        scanner.next(); // Consommer l'entrée non valide
+	        System.out.println("Veuillez entrer un nombre valide.");
+	        System.out.print("Combien de joueurs ? (au moins 2 et au maximum " + maxJoueurs + ") ");
+	    }
+	    int nombreJoueurs = scanner.nextInt();
+	    while (nombreJoueurs < 2 || nombreJoueurs > maxJoueurs) {
+	        System.out.println("Le nombre de joueurs doit être entre 2 et " + maxJoueurs + ". Veuillez réessayer.");
+	        while (!scanner.hasNextInt()) {
+	            scanner.next(); // Consommer l'entrée non valide
+	            System.out.println("Veuillez entrer un nombre valide.");
+	        }
+	        nombreJoueurs = scanner.nextInt();
+	    }
+	    return nombreJoueurs;
 	}
+
 
 	@Override
 	public PirateNom choisirPirate() {
-		try {
-			System.out.println("Pirates disponibles : ");
-			for (int i = 0; i < piratesDisponibles.size(); i++) {
-				System.out.println((i + 1) + ". " + piratesDisponibles.get(i));
-			}
-			System.out.print("Choisissez un pirate : ");
-			int choix = scanner.nextInt();
-			// Vérifier si le choix est valide
-			while (choix < 1 || choix > piratesDisponibles.size()) {
-				System.out.println("Choix invalide. Veuillez choisir un pirate parmi les options disponibles.");
-				System.out.print("Choisissez un pirate : ");
-				choix = scanner.nextInt();
-			}
-			// Retirer le pirate choisi de la liste des pirates disponibles
-			PirateNom pirateChoisi = piratesDisponibles.remove(choix - 1);
-			return pirateChoisi;
-		} catch (InputMismatchException e) {
-			System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
-			// Vider le scanner pour éviter une boucle infinie
-			scanner.nextLine();
-			return choisirPirate(); // Appel récursif pour redemander à l'utilisateur de saisir un pirate
-		}
+	    System.out.println("Pirates disponibles : ");
+	    for (int i = 0; i < piratesDisponibles.size(); i++) {
+	        System.out.println((i + 1) + ". " + piratesDisponibles.get(i));
+	    }
+	    System.out.print("Choisissez un pirate : ");
+	    while (!scanner.hasNextInt()) {
+	        scanner.next(); // Consommer l'entrée non valide
+	        System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+	        System.out.print("Choisissez un pirate : ");
+	    }
+	    int choix = scanner.nextInt();
+	    // Vérifier si le choix est valide
+	    while (choix < 1 || choix > piratesDisponibles.size()) {
+	        System.out.println("Choix invalide. Veuillez choisir un pirate parmi les options disponibles.");
+	        System.out.print("Choisissez un pirate : ");
+	        while (!scanner.hasNextInt()) {
+	            scanner.next(); // Consommer l'entrée non valide
+	            System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+	            System.out.print("Choisissez un pirate : ");
+	        }
+	        choix = scanner.nextInt();
+	    }
+	    // Retirer le pirate choisi de la liste des pirates disponibles
+	    PirateNom pirateChoisi = piratesDisponibles.remove(choix - 1);
+	    return pirateChoisi;
 	}
+
 
 	@Override
 	public Couleur choisirCouleur() {
-		try {
-			System.out.println("Couleurs disponibles : ");
-			for (int i = 0; i < couleursDisponibles.size(); i++) {
-				System.out.println((i + 1) + ". " + couleursDisponibles.get(i));
-			}
-			System.out.print("Choisissez une couleur : ");
-			int choix = scanner.nextInt();
-			// Vérifier si le choix est valide
-			while (choix < 1 || choix > couleursDisponibles.size()) {
-				System.out.println("Choix invalide. Veuillez choisir une couleur parmi les options disponibles.");
-				System.out.print("Choisissez une couleur : ");
-				choix = scanner.nextInt();
-			}
-			// Retirer la couleur choisie de la liste des couleurs disponibles
-			Couleur couleurChoisie = couleursDisponibles.remove(choix - 1);
-			return couleurChoisie;
-		} catch (InputMismatchException e) {
-			System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
-			// Vider le scanner pour éviter une boucle infinie
-			scanner.nextLine();
-			return choisirCouleur(); // Appel récursif pour redemander à l'utilisateur de saisir une couleur
-		}
+	    System.out.println("Couleurs disponibles : ");
+	    for (int i = 0; i < couleursDisponibles.size(); i++) {
+	        System.out.println((i + 1) + ". " + couleursDisponibles.get(i));
+	    }
+	    System.out.print("Choisissez une couleur : ");
+	    while (!scanner.hasNextInt()) {
+	        scanner.next(); // Consommer l'entrée non valide
+	        System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+	        System.out.print("Choisissez une couleur : ");
+	    }
+	    int choix = scanner.nextInt();
+	    // Vérifier si le choix est valide
+	    while (choix < 1 || choix > couleursDisponibles.size()) {
+	        System.out.println("Choix invalide. Veuillez choisir une couleur parmi les options disponibles.");
+	        System.out.print("Choisissez une couleur : ");
+	        while (!scanner.hasNextInt()) {
+	            scanner.next(); // Consommer l'entrée non valide
+	            System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+	            System.out.print("Choisissez une couleur : ");
+	        }
+	        choix = scanner.nextInt();
+	    }
+	    // Retirer la couleur choisie de la liste des couleurs disponibles
+	    Couleur couleurChoisie = couleursDisponibles.remove(choix - 1);
+	    return couleurChoisie;
 	}
+
 
 	@Override
 	public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
