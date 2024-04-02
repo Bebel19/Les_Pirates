@@ -97,34 +97,37 @@ public class Jeu {
 	}
 
 	public void deplacerPirate(Pirate pirate, int valeurDe) {
-		if (jeuTermine) {
-			return;
-		}
+	    if (jeuTermine) {
+	        return;
+	    }
 
-		int nouvellePosition = pirate.getPosition() + valeurDe;
+	    int nouvellePosition = calculerNouvellePosition(pirate.getPosition(), valeurDe);
+	    pirate.setPosition(nouvellePosition);
 
-		// Gestion du dépassement de la dernière case
-		if (nouvellePosition > Plateau.getNbCases()) {
-			nouvellePosition -= Plateau.getNbCases();
-		}
+	    Case caseCourante = plateau.getCase(nouvellePosition);
+	    affichage.afficherPosition(nouvellePosition, caseCourante);
 
-		// Gestion du recul avant la case 1
-		if (nouvellePosition < 1) {
-			nouvellePosition += Plateau.getNbCases();
-		}
-
-		pirate.setPosition(nouvellePosition);
-
-		Case caseCourante = plateau.getCase(nouvellePosition);
-		affichage.afficherPosition(nouvellePosition, caseCourante);
-
-		if (caseCourante != null) {
-			caseCourante.appliquerEffet(pirate, this);
-			if (jeuTermine) {
-				return;
-			}
-		}
+	    if (caseCourante != null) {
+	        caseCourante.appliquerEffet(pirate, this);
+	        if (jeuTermine) {
+	            return;// Ne doit pas étre retiré car le jeu peut se terminer si le joueur est sur une caseWIN 
+	        }
+	    }
 	}
+
+	
+	private int calculerNouvellePosition(int positionActuelle, int deplacement) {
+	    int nouvellePosition = positionActuelle + deplacement;
+	    int nbCases = Plateau.getNbCases();
+
+	    if (nouvellePosition > nbCases) {
+	        nouvellePosition -= nbCases;
+	    } else if (nouvellePosition < 1) {
+	        nouvellePosition += nbCases;
+	    }
+	    return nouvellePosition;
+	}
+
 
 	public void terminerJeu(Pirate pirate) {
 		affichage.afficherGagnant(pirate);
