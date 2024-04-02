@@ -1,0 +1,109 @@
+\doxysection{entites.\+Plateau Class Reference}
+\hypertarget{classentites_1_1_plateau}{}\label{classentites_1_1_plateau}\index{entites.Plateau@{entites.Plateau}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentites_1_1_plateau_a62d1038b6c965aafa5e6c82b04392b27}{Plateau}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur du plateau de jeu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classentites_1_1_case}{Case}} \mbox{\hyperlink{classentites_1_1_plateau_a86e81a9c3f33e7f5c17b654e0e34ca84}{get\+Case}} (int numero)
+\begin{DoxyCompactList}\small\item\em Obtient la case correspondant au numéro spécifié. \end{DoxyCompactList}\item 
+Collection$<$ \mbox{\hyperlink{classentites_1_1_case}{Case}} $>$ \mbox{\hyperlink{classentites_1_1_plateau_a8ef08aa4d0713257d6c93944f32526e5}{get\+Cases}} ()
+\begin{DoxyCompactList}\small\item\em Retourne une collection de toutes les cases sur le plateau. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classentites_1_1_plateau_a41f041b43731960d99b48390ac3b97ba}{calcul\+Position}} (int nouvelle\+Position)
+\begin{DoxyCompactList}\small\item\em Calcule la position finale sur le plateau en tenant compte des débordements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classentites_1_1_plateau_a00eb03037cbb281c22bd0a2c95fe8344}{get\+Nb\+Cases}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nombre total de cases sur le plateau. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classentites_1_1_plateau_a62d1038b6c965aafa5e6c82b04392b27}\label{classentites_1_1_plateau_a62d1038b6c965aafa5e6c82b04392b27} 
+\index{entites.Plateau@{entites.Plateau}!Plateau@{Plateau}}
+\index{Plateau@{Plateau}!entites.Plateau@{entites.Plateau}}
+\doxysubsubsection{\texorpdfstring{Plateau()}{Plateau()}}
+{\footnotesize\ttfamily entites.\+Plateau.\+Plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur du plateau de jeu. 
+
+\begin{DoxyVerb}   Initialise le plateau de jeu avec un nombre prédéfini de cases, en
+   générant aléatoirement les cases spéciales telles que les cases rhum
+   et les cases arme, tout en réservant une case pour la victoire.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classentites_1_1_plateau_a41f041b43731960d99b48390ac3b97ba}\label{classentites_1_1_plateau_a41f041b43731960d99b48390ac3b97ba} 
+\index{entites.Plateau@{entites.Plateau}!calculPosition@{calculPosition}}
+\index{calculPosition@{calculPosition}!entites.Plateau@{entites.Plateau}}
+\doxysubsubsection{\texorpdfstring{calculPosition()}{calculPosition()}}
+{\footnotesize\ttfamily int entites.\+Plateau.\+calcul\+Position (\begin{DoxyParamCaption}\item[{int}]{nouvelle\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcule la position finale sur le plateau en tenant compte des débordements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nouvelle\+Position} & La position calculée avant ajustement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La position ajustée en fonction des limites du plateau. \begin{DoxyVerb}    Cette méthode ajuste la position si le calcul initial dépasse le
+    nombre total de cases, permettant ainsi de "boucler" autour du
+    plateau.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_plateau_a86e81a9c3f33e7f5c17b654e0e34ca84}\label{classentites_1_1_plateau_a86e81a9c3f33e7f5c17b654e0e34ca84} 
+\index{entites.Plateau@{entites.Plateau}!getCase@{getCase}}
+\index{getCase@{getCase}!entites.Plateau@{entites.Plateau}}
+\doxysubsubsection{\texorpdfstring{getCase()}{getCase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classentites_1_1_case}{Case}} entites.\+Plateau.\+get\+Case (\begin{DoxyParamCaption}\item[{int}]{numero }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la case correspondant au numéro spécifié. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & Le numéro de la case à obtenir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La case au numéro donné ou null si aucune case n\textquotesingle{}existe à ce numéro. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_plateau_a8ef08aa4d0713257d6c93944f32526e5}\label{classentites_1_1_plateau_a8ef08aa4d0713257d6c93944f32526e5} 
+\index{entites.Plateau@{entites.Plateau}!getCases@{getCases}}
+\index{getCases@{getCases}!entites.Plateau@{entites.Plateau}}
+\doxysubsubsection{\texorpdfstring{getCases()}{getCases()}}
+{\footnotesize\ttfamily Collection$<$ \mbox{\hyperlink{classentites_1_1_case}{Case}} $>$ entites.\+Plateau.\+get\+Cases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne une collection de toutes les cases sur le plateau. 
+
+\begin{DoxyReturn}{Returns}
+Une collection contenant toutes les cases du plateau. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_plateau_a00eb03037cbb281c22bd0a2c95fe8344}\label{classentites_1_1_plateau_a00eb03037cbb281c22bd0a2c95fe8344} 
+\index{entites.Plateau@{entites.Plateau}!getNbCases@{getNbCases}}
+\index{getNbCases@{getNbCases}!entites.Plateau@{entites.Plateau}}
+\doxysubsubsection{\texorpdfstring{getNbCases()}{getNbCases()}}
+{\footnotesize\ttfamily static int entites.\+Plateau.\+get\+Nb\+Cases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retourne le nombre total de cases sur le plateau. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre total de cases. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entites/Plateau.\+java\end{DoxyCompactItemize}

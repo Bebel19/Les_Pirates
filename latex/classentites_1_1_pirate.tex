@@ -1,0 +1,183 @@
+\doxysection{entites.\+Pirate Class Reference}
+\hypertarget{classentites_1_1_pirate}{}\label{classentites_1_1_pirate}\index{entites.Pirate@{entites.Pirate}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentites_1_1_pirate_a087aab9ec3410aff56bb73c926c091c1}{Pirate}} (String nom, \mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}} couleur)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe Pirate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classentites_1_1_pirate_ae21b6b68d8f2d015b1d21d1fe35944fc}{get\+Pv}} ()
+\begin{DoxyCompactList}\small\item\em Retourne les points de vie actuels du pirate. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classentites_1_1_pirate_a722e38c4e3d91dd8971e5d14de04c7b4}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nom du pirate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}} \mbox{\hyperlink{classentites_1_1_pirate_a4954791f5ee648010f20c56d280b8486}{get\+Couleur}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la couleur du pirate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classentites_1_1_pirate_abc0e06afc015a634a165ad4f72ee18ab}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la position actuelle du pirate sur le plateau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentites_1_1_pirate_a9f311c9fae3f92794b61a5f736e48f1a}{set\+Position}} (int destination)
+\begin{DoxyCompactList}\small\item\em Met à jour la position du pirate sur le plateau. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_arme}{Arme}} \mbox{\hyperlink{classentites_1_1_pirate_a99110c09c83f058aa0852143684f49ca}{get\+Arme}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}arme actuellement équipée par le pirate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentites_1_1_pirate_af61886875ff0428b3d9f9e64f257d622}{perdre\+Pv}} (int perte)
+\begin{DoxyCompactList}\small\item\em Réduit les points de vie du pirate en fonction des dommages subis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentites_1_1_pirate_aea33d544e67fb4153ffc7f43efc82d09}{set\+Arme}} (\mbox{\hyperlink{enumutils_1_1_arme}{Arme}} nouvelle\+Arme)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}arme équipée par le pirate. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classentites_1_1_pirate_ac8c0900f2db99170d26f3896095690f9}{est\+Mort}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si le pirate est mort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classentites_1_1_pirate_a087aab9ec3410aff56bb73c926c091c1}\label{classentites_1_1_pirate_a087aab9ec3410aff56bb73c926c091c1} 
+\index{entites.Pirate@{entites.Pirate}!Pirate@{Pirate}}
+\index{Pirate@{Pirate}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{Pirate()}{Pirate()}}
+{\footnotesize\ttfamily entites.\+Pirate.\+Pirate (\begin{DoxyParamCaption}\item[{String}]{nom,  }\item[{\mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}}}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe Pirate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Le nom du pirate. \\
+\hline
+{\em couleur} & La couleur du pirate, utilisée pour l\textquotesingle{}affichage. \begin{DoxyVerb}           Initialise un nouveau pirate avec un nom et une couleur
+           spécifiques, une position initiale sur le plateau, et une arme
+           par défaut (les poings).
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classentites_1_1_pirate_ac8c0900f2db99170d26f3896095690f9}\label{classentites_1_1_pirate_ac8c0900f2db99170d26f3896095690f9} 
+\index{entites.Pirate@{entites.Pirate}!estMort@{estMort}}
+\index{estMort@{estMort}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{estMort()}{estMort()}}
+{\footnotesize\ttfamily boolean entites.\+Pirate.\+est\+Mort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si le pirate est mort. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si les points de vie du pirate sont à zéro ou moins, faux sinon. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_a99110c09c83f058aa0852143684f49ca}\label{classentites_1_1_pirate_a99110c09c83f058aa0852143684f49ca} 
+\index{entites.Pirate@{entites.Pirate}!getArme@{getArme}}
+\index{getArme@{getArme}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{getArme()}{getArme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutils_1_1_arme}{Arme}} entites.\+Pirate.\+get\+Arme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne l\textquotesingle{}arme actuellement équipée par le pirate. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}arme du pirate. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_a4954791f5ee648010f20c56d280b8486}\label{classentites_1_1_pirate_a4954791f5ee648010f20c56d280b8486} 
+\index{entites.Pirate@{entites.Pirate}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}} entites.\+Pirate.\+get\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la couleur du pirate. 
+
+\begin{DoxyReturn}{Returns}
+La couleur du pirate. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_a722e38c4e3d91dd8971e5d14de04c7b4}\label{classentites_1_1_pirate_a722e38c4e3d91dd8971e5d14de04c7b4} 
+\index{entites.Pirate@{entites.Pirate}!getNom@{getNom}}
+\index{getNom@{getNom}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily String entites.\+Pirate.\+get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne le nom du pirate. 
+
+\begin{DoxyReturn}{Returns}
+Le nom du pirate. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_abc0e06afc015a634a165ad4f72ee18ab}\label{classentites_1_1_pirate_abc0e06afc015a634a165ad4f72ee18ab} 
+\index{entites.Pirate@{entites.Pirate}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily int entites.\+Pirate.\+get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la position actuelle du pirate sur le plateau. 
+
+\begin{DoxyReturn}{Returns}
+La position du pirate. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_ae21b6b68d8f2d015b1d21d1fe35944fc}\label{classentites_1_1_pirate_ae21b6b68d8f2d015b1d21d1fe35944fc} 
+\index{entites.Pirate@{entites.Pirate}!getPv@{getPv}}
+\index{getPv@{getPv}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{getPv()}{getPv()}}
+{\footnotesize\ttfamily int entites.\+Pirate.\+get\+Pv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne les points de vie actuels du pirate. 
+
+\begin{DoxyReturn}{Returns}
+Les points de vie (pv) du pirate. 
+\end{DoxyReturn}
+\Hypertarget{classentites_1_1_pirate_af61886875ff0428b3d9f9e64f257d622}\label{classentites_1_1_pirate_af61886875ff0428b3d9f9e64f257d622} 
+\index{entites.Pirate@{entites.Pirate}!perdrePv@{perdrePv}}
+\index{perdrePv@{perdrePv}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{perdrePv()}{perdrePv()}}
+{\footnotesize\ttfamily void entites.\+Pirate.\+perdre\+Pv (\begin{DoxyParamCaption}\item[{int}]{perte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Réduit les points de vie du pirate en fonction des dommages subis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em perte} & Le nombre de points de vie à retirer. \begin{DoxyVerb}         Soustrait la perte spécifiée des points de vie du pirate, sans
+         tomber en dessous de zéro.
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classentites_1_1_pirate_aea33d544e67fb4153ffc7f43efc82d09}\label{classentites_1_1_pirate_aea33d544e67fb4153ffc7f43efc82d09} 
+\index{entites.Pirate@{entites.Pirate}!setArme@{setArme}}
+\index{setArme@{setArme}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{setArme()}{setArme()}}
+{\footnotesize\ttfamily void entites.\+Pirate.\+set\+Arme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumutils_1_1_arme}{Arme}}}]{nouvelle\+Arme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Met à jour l\textquotesingle{}arme équipée par le pirate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nouvelle\+Arme} & La nouvelle arme du pirate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classentites_1_1_pirate_a9f311c9fae3f92794b61a5f736e48f1a}\label{classentites_1_1_pirate_a9f311c9fae3f92794b61a5f736e48f1a} 
+\index{entites.Pirate@{entites.Pirate}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!entites.Pirate@{entites.Pirate}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void entites.\+Pirate.\+set\+Position (\begin{DoxyParamCaption}\item[{int}]{destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Met à jour la position du pirate sur le plateau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & La nouvelle position du pirate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entites/Pirate.\+java\end{DoxyCompactItemize}

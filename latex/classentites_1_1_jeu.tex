@@ -1,0 +1,98 @@
+\doxysection{entites.\+Jeu Class Reference}
+\hypertarget{classentites_1_1_jeu}{}\label{classentites_1_1_jeu}\index{entites.Jeu@{entites.Jeu}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentites_1_1_jeu_a43f1d57cacbe72bd29e2a7aaacbd7f2c}{Jeu}} (\mbox{\hyperlink{interfaceaffichage_1_1_i_affichage}{IAffichage}} affichage)
+\begin{DoxyCompactList}\small\item\em Constructeur du jeu avec affichage spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentites_1_1_jeu_a03474c0cf923ca7ba6725086cf9dacd9}{start}} ()
+\begin{DoxyCompactList}\small\item\em Commence et exécute le cycle de jeu jusqu\textquotesingle{}à ce qu\textquotesingle{}un gagnant soit déterminé. \end{DoxyCompactList}\item 
+\Hypertarget{classentites_1_1_jeu_ab1cb1dc08ee45524be92eb343950d279}\label{classentites_1_1_jeu_ab1cb1dc08ee45524be92eb343950d279} 
+\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}\mbox{[}$\,$\mbox{]} {\bfseries get\+Pirates} ()
+\item 
+void \mbox{\hyperlink{classentites_1_1_jeu_a71ababa2ba36c0bac5dcf411d67f1cf4}{deplacer\+Pirate}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate, int valeur\+De)
+\begin{DoxyCompactList}\small\item\em Déplace un pirate sur le plateau en fonction du résultat d\textquotesingle{}un lancer de dé. \end{DoxyCompactList}\item 
+\Hypertarget{classentites_1_1_jeu_a73aa0c0a6c2950780075e0c212766e7b}\label{classentites_1_1_jeu_a73aa0c0a6c2950780075e0c212766e7b} 
+void {\bfseries terminer\+Jeu} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate)
+\item 
+boolean \mbox{\hyperlink{classentites_1_1_jeu_a94c6c28316edc9dccdada96d3159c54c}{engager\+Duel}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate1, \mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate2)
+\begin{DoxyCompactList}\small\item\em Engage un duel entre deux pirates lorsqu\textquotesingle{}ils se rencontrent sur le plateau. \end{DoxyCompactList}\item 
+\Hypertarget{classentites_1_1_jeu_a69096efc4db60e6e242e0f4be5d6445a}\label{classentites_1_1_jeu_a69096efc4db60e6e242e0f4be5d6445a} 
+void {\bfseries verifier\+Et\+Retirer\+Pirates\+Morts} ()
+\item 
+\Hypertarget{classentites_1_1_jeu_a4bb02f6acebcd8f1084f257e1bb130d7}\label{classentites_1_1_jeu_a4bb02f6acebcd8f1084f257e1bb130d7} 
+\mbox{\hyperlink{interfaceaffichage_1_1_i_affichage}{IAffichage}} {\bfseries get\+Affichage} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classentites_1_1_jeu_a43f1d57cacbe72bd29e2a7aaacbd7f2c}\label{classentites_1_1_jeu_a43f1d57cacbe72bd29e2a7aaacbd7f2c} 
+\index{entites.Jeu@{entites.Jeu}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!entites.Jeu@{entites.Jeu}}
+\doxysubsubsection{\texorpdfstring{Jeu()}{Jeu()}}
+{\footnotesize\ttfamily entites.\+Jeu.\+Jeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceaffichage_1_1_i_affichage}{IAffichage}}}]{affichage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur du jeu avec affichage spécifié. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em affichage} & L\textquotesingle{}interface d\textquotesingle{}affichage utilisée pour interagir avec l\textquotesingle{}utilisateur.\\
+\hline
+\end{DoxyParams}
+Initialise le jeu avec un dé, et l\textquotesingle{}interface d\textquotesingle{}affichage fournie. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classentites_1_1_jeu_a71ababa2ba36c0bac5dcf411d67f1cf4}\label{classentites_1_1_jeu_a71ababa2ba36c0bac5dcf411d67f1cf4} 
+\index{entites.Jeu@{entites.Jeu}!deplacerPirate@{deplacerPirate}}
+\index{deplacerPirate@{deplacerPirate}!entites.Jeu@{entites.Jeu}}
+\doxysubsubsection{\texorpdfstring{deplacerPirate()}{deplacerPirate()}}
+{\footnotesize\ttfamily void entites.\+Jeu.\+deplacer\+Pirate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate,  }\item[{int}]{valeur\+De }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Déplace un pirate sur le plateau en fonction du résultat d\textquotesingle{}un lancer de dé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate à déplacer. \\
+\hline
+{\em valeur\+De} & Le nombre de cases à déplacer le pirate.\\
+\hline
+\end{DoxyParams}
+Calcule la nouvelle position du pirate sur le plateau, applique les effets de la case atteinte, et vérifie les conditions de fin de jeu. \Hypertarget{classentites_1_1_jeu_a94c6c28316edc9dccdada96d3159c54c}\label{classentites_1_1_jeu_a94c6c28316edc9dccdada96d3159c54c} 
+\index{entites.Jeu@{entites.Jeu}!engagerDuel@{engagerDuel}}
+\index{engagerDuel@{engagerDuel}!entites.Jeu@{entites.Jeu}}
+\doxysubsubsection{\texorpdfstring{engagerDuel()}{engagerDuel()}}
+{\footnotesize\ttfamily boolean entites.\+Jeu.\+engager\+Duel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate1,  }\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Engage un duel entre deux pirates lorsqu\textquotesingle{}ils se rencontrent sur le plateau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate1} & Le premier pirate. \\
+\hline
+{\em pirate2} & Le second pirate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un booléen indiquant si un duel a eu lieu.
+\end{DoxyReturn}
+Compare la force des armes des pirates et détermine le vainqueur du duel. Le pirate perdant subit une perte de points de vie. \Hypertarget{classentites_1_1_jeu_a03474c0cf923ca7ba6725086cf9dacd9}\label{classentites_1_1_jeu_a03474c0cf923ca7ba6725086cf9dacd9} 
+\index{entites.Jeu@{entites.Jeu}!start@{start}}
+\index{start@{start}!entites.Jeu@{entites.Jeu}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void entites.\+Jeu.\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Commence et exécute le cycle de jeu jusqu\textquotesingle{}à ce qu\textquotesingle{}un gagnant soit déterminé. 
+
+Cette méthode gère la séquence complète du jeu, incluant le choix des joueurs et des pirates, les déplacements sur le plateau, les duels, et la vérification des conditions de victoire. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entites/Jeu.\+java\end{DoxyCompactItemize}

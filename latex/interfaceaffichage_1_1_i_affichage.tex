@@ -1,0 +1,248 @@
+\doxysection{affichage.\+IAffichage Interface Reference}
+\hypertarget{interfaceaffichage_1_1_i_affichage}{}\label{interfaceaffichage_1_1_i_affichage}\index{affichage.IAffichage@{affichage.IAffichage}}
+Inheritance diagram for affichage.\+IAffichage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceaffichage_1_1_i_affichage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_aa193f149927ade31b465ead89f22ea8a}{afficher\+Plateau}} (\mbox{\hyperlink{classentites_1_1_plateau}{Plateau}} plateau)
+\begin{DoxyCompactList}\small\item\em Affiche le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_aedb2fe957d4965f43b53824c0126d381}{afficher\+Message}} (String message)
+\begin{DoxyCompactList}\small\item\em Affiche un message à l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_a4b3d4ff91cbf6d4e55437acc50b25838}{afficher\+Position}} (int position\+Afficher, \mbox{\hyperlink{classentites_1_1_case}{Case}} case\+Courante)
+\begin{DoxyCompactList}\small\item\em Affiche la position actuelle d\textquotesingle{}une case et son contenu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_aac653d4540941d9e0d7fd1af94e20fa4}{afficher\+Gagnant}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate)
+\begin{DoxyCompactList}\small\item\em Affiche le gagnant du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_a08a5c5aa5fb5007f699a37f340b2e7e8}{afficher\+Debut\+Tour}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate)
+\begin{DoxyCompactList}\small\item\em Affiche le début du tour d\textquotesingle{}un pirate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_ae3c61c1924538cc698f5ef3eaa784720}{afficher\+Fin\+Tour}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate)
+\begin{DoxyCompactList}\small\item\em Affiche la fin du tour d\textquotesingle{}un pirate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_a0a23f4b6d91837d8d069857560c22815}{afficher\+Ivresse}} (int val\+Recul)
+\begin{DoxyCompactList}\small\item\em Affiche un avertissement quand un pirate subit l\textquotesingle{}effet d\textquotesingle{}ivresse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_ac1683599d01d216d93d791a60c85477e}{afficher\+Changement\+Arme}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate, \mbox{\hyperlink{enumutils_1_1_arme}{Arme}} nouvelle\+Arme)
+\begin{DoxyCompactList}\small\item\em Affiche un changement d\textquotesingle{}arme pour un pirate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_ad9a645ffc02310f35fa35deae76037c9}{demander\+Nombre\+Joueurs}} ()
+\begin{DoxyCompactList}\small\item\em Demande le nombre de joueurs participant au jeu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_pirate_nom}{Pirate\+Nom}} \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_aeb092ca39110deee657e02dc696ccb2e}{choisir\+Pirate}} ()
+\begin{DoxyCompactList}\small\item\em Permet à l\textquotesingle{}utilisateur de choisir un nom de pirate parmi les options disponibles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}} \mbox{\hyperlink{interfaceaffichage_1_1_i_affichage_a9605c6d23508d8f56c7cc3bed0740f95}{choisir\+Couleur}} ()
+\begin{DoxyCompactList}\small\item\em Permet à l\textquotesingle{}utilisateur de choisir une couleur parmi les options disponibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceaffichage_1_1_i_affichage_ac1683599d01d216d93d791a60c85477e}\label{interfaceaffichage_1_1_i_affichage_ac1683599d01d216d93d791a60c85477e} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherChangementArme@{afficherChangementArme}}
+\index{afficherChangementArme@{afficherChangementArme}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherChangementArme()}{afficherChangementArme()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Changement\+Arme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate,  }\item[{\mbox{\hyperlink{enumutils_1_1_arme}{Arme}}}]{nouvelle\+Arme }\end{DoxyParamCaption})}
+
+
+
+Affiche un changement d\textquotesingle{}arme pour un pirate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate qui change d\textquotesingle{}arme. \\
+\hline
+{\em nouvelle\+Arme} & La nouvelle arme obtenue par le pirate. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a67f1cc656dd50eb5d095277ed55f328c}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_a0b1c92869de54fe2e16ab9468a37968c}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_a08a5c5aa5fb5007f699a37f340b2e7e8}\label{interfaceaffichage_1_1_i_affichage_a08a5c5aa5fb5007f699a37f340b2e7e8} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherDebutTour@{afficherDebutTour}}
+\index{afficherDebutTour@{afficherDebutTour}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherDebutTour()}{afficherDebutTour()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Debut\+Tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate }\end{DoxyParamCaption})}
+
+
+
+Affiche le début du tour d\textquotesingle{}un pirate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate dont le tour commence. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a92ced980e54314dd9e83d4e67b43bc43}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_aa3f4cf2f3b2b10c7cbc48f61d5f42ffc}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_ae3c61c1924538cc698f5ef3eaa784720}\label{interfaceaffichage_1_1_i_affichage_ae3c61c1924538cc698f5ef3eaa784720} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherFinTour@{afficherFinTour}}
+\index{afficherFinTour@{afficherFinTour}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherFinTour()}{afficherFinTour()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Fin\+Tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate }\end{DoxyParamCaption})}
+
+
+
+Affiche la fin du tour d\textquotesingle{}un pirate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate dont le tour se termine. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_abddf8717678fc59f4ca4c854263fbbf4}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_afa2c0a7b3a9f68d96607c5e58b088848}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_aac653d4540941d9e0d7fd1af94e20fa4}\label{interfaceaffichage_1_1_i_affichage_aac653d4540941d9e0d7fd1af94e20fa4} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherGagnant@{afficherGagnant}}
+\index{afficherGagnant@{afficherGagnant}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherGagnant()}{afficherGagnant()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Gagnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate }\end{DoxyParamCaption})}
+
+
+
+Affiche le gagnant du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate qui a gagné le jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_aa71b0b7d3f6ab18d4af1e96622bfa841}{affichage.\+Affichage\+Terminal}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a75a69f4db9a61f5d948031fc735938fd}{affichage.\+Affichage\+Java\+FX}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_a0a23f4b6d91837d8d069857560c22815}\label{interfaceaffichage_1_1_i_affichage_a0a23f4b6d91837d8d069857560c22815} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherIvresse@{afficherIvresse}}
+\index{afficherIvresse@{afficherIvresse}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherIvresse()}{afficherIvresse()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Ivresse (\begin{DoxyParamCaption}\item[{int}]{val\+Recul }\end{DoxyParamCaption})}
+
+
+
+Affiche un avertissement quand un pirate subit l\textquotesingle{}effet d\textquotesingle{}ivresse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Recul} & Le nombre de cases que le pirate recule à cause de l\textquotesingle{}ivresse. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a5d767e5294405779412a4462a26e5ae3}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_aa049da84da9a9ffb0e59a591b1b4f9f9}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_aedb2fe957d4965f43b53824c0126d381}\label{interfaceaffichage_1_1_i_affichage_aedb2fe957d4965f43b53824c0126d381} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherMessage@{afficherMessage}}
+\index{afficherMessage@{afficherMessage}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherMessage()}{afficherMessage()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Message (\begin{DoxyParamCaption}\item[{String}]{message }\end{DoxyParamCaption})}
+
+
+
+Affiche un message à l\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Le message à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a84129d0b2e4817a462c7d9097cdc7db7}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_a1633b234809283dcd964b82fcda6d2f0}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_aa193f149927ade31b465ead89f22ea8a}\label{interfaceaffichage_1_1_i_affichage_aa193f149927ade31b465ead89f22ea8a} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherPlateau@{afficherPlateau}}
+\index{afficherPlateau@{afficherPlateau}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherPlateau()}{afficherPlateau()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Plateau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_plateau}{Plateau}}}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Affiche le plateau de jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & L\textquotesingle{}objet Plateau représentant l\textquotesingle{}état actuel du jeu à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a49a72c571bbe5766908bd6b291da5b45}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_a925ee9e2e288b4b6ef96fc367ad35079}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_a4b3d4ff91cbf6d4e55437acc50b25838}\label{interfaceaffichage_1_1_i_affichage_a4b3d4ff91cbf6d4e55437acc50b25838} 
+\index{affichage.IAffichage@{affichage.IAffichage}!afficherPosition@{afficherPosition}}
+\index{afficherPosition@{afficherPosition}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{afficherPosition()}{afficherPosition()}}
+{\footnotesize\ttfamily void affichage.\+IAffichage.\+afficher\+Position (\begin{DoxyParamCaption}\item[{int}]{position\+Afficher,  }\item[{\mbox{\hyperlink{classentites_1_1_case}{Case}}}]{case\+Courante }\end{DoxyParamCaption})}
+
+
+
+Affiche la position actuelle d\textquotesingle{}une case et son contenu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+Afficher} & Le numéro de la case à afficher. \\
+\hline
+{\em case\+Courante} & La case à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a1d6e683ab38045c496b2e3fb7cbbcabb}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_a8a4e8401cd11dbb01c7b40aee6aba840}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_a9605c6d23508d8f56c7cc3bed0740f95}\label{interfaceaffichage_1_1_i_affichage_a9605c6d23508d8f56c7cc3bed0740f95} 
+\index{affichage.IAffichage@{affichage.IAffichage}!choisirCouleur@{choisirCouleur}}
+\index{choisirCouleur@{choisirCouleur}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{choisirCouleur()}{choisirCouleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutils_1_1_couleur}{Couleur}} affichage.\+IAffichage.\+choisir\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet à l\textquotesingle{}utilisateur de choisir une couleur parmi les options disponibles. 
+
+\begin{DoxyReturn}{Returns}
+La couleur choisie. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a3205bfe5c62fab64a1bf222ab6325c45}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_ab4ec0d77fc3c0798dde4826e03415938}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_aeb092ca39110deee657e02dc696ccb2e}\label{interfaceaffichage_1_1_i_affichage_aeb092ca39110deee657e02dc696ccb2e} 
+\index{affichage.IAffichage@{affichage.IAffichage}!choisirPirate@{choisirPirate}}
+\index{choisirPirate@{choisirPirate}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{choisirPirate()}{choisirPirate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutils_1_1_pirate_nom}{Pirate\+Nom}} affichage.\+IAffichage.\+choisir\+Pirate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet à l\textquotesingle{}utilisateur de choisir un nom de pirate parmi les options disponibles. 
+
+\begin{DoxyReturn}{Returns}
+Le nom du pirate choisi. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_ac0eaae948c9d669ddf51f1eef07fe31c}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_ae9111f85713c8bd6ef9f243138801970}{affichage.\+Affichage\+Terminal}}.
+
+\Hypertarget{interfaceaffichage_1_1_i_affichage_ad9a645ffc02310f35fa35deae76037c9}\label{interfaceaffichage_1_1_i_affichage_ad9a645ffc02310f35fa35deae76037c9} 
+\index{affichage.IAffichage@{affichage.IAffichage}!demanderNombreJoueurs@{demanderNombreJoueurs}}
+\index{demanderNombreJoueurs@{demanderNombreJoueurs}!affichage.IAffichage@{affichage.IAffichage}}
+\doxysubsubsection{\texorpdfstring{demanderNombreJoueurs()}{demanderNombreJoueurs()}}
+{\footnotesize\ttfamily int affichage.\+IAffichage.\+demander\+Nombre\+Joueurs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Demande le nombre de joueurs participant au jeu. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de joueurs entré par l\textquotesingle{}utilisateur. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classaffichage_1_1_affichage_java_f_x_a87d536203b2693cd4911f57964a9bb27}{affichage.\+Affichage\+Java\+FX}}, and \mbox{\hyperlink{classaffichage_1_1_affichage_terminal_a070c994ccbd1baed51a459482031383e}{affichage.\+Affichage\+Terminal}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/affichage/IAffichage.\+java\end{DoxyCompactItemize}

@@ -1,3 +1,11 @@
+/**
+ * @class Jeu
+ * @brief Classe principale qui gère la logique du jeu.
+ *
+ * Responsable de l'initialisation du jeu, de la gestion des tours, des duels entre pirates,
+ * et de la détermination du gagnant. Elle utilise un plateau de jeu, des dés, et un système d'affichage
+ * pour interagir avec les joueurs.
+ */
 package entites;
 
 import java.util.ArrayList;
@@ -11,28 +19,31 @@ import utils.PirateNom;
 import utils.Couleur;
 
 public class Jeu {
-	private int nbJoueurs;
+	private int nbJoueurs =2;
 	private Pirate[] listePirates;
 	private Plateau plateau = new Plateau();
 	private De de;
 	private IAffichage affichage;
 	private boolean jeuTermine = false;
-
+	/**
+	 * @brief Constructeur du jeu avec affichage spécifié.
+	 * @param affichage L'interface d'affichage utilisée pour interagir avec l'utilisateur.
+	 *
+	 * Initialise le jeu avec un dé, et l'interface d'affichage fournie.
+	 */
 	public Jeu(IAffichage affichage) {
 
 		this.listePirates = new Pirate[nbJoueurs];
-		this.nbJoueurs = 2;
 		this.de = new De();
 		this.affichage = affichage;
 	}
 
-	public Jeu(IAffichage affichage, int nbJoueurs) {
-		this.listePirates = new Pirate[nbJoueurs];
-		this.nbJoueurs = nbJoueurs;
-		this.de = new De();
-		this.affichage = affichage;
-	}
-
+	/**
+	 * @brief Commence et exécute le cycle de jeu jusqu'à ce qu'un gagnant soit déterminé.
+	 *
+	 * Cette méthode gère la séquence complète du jeu, incluant le choix des joueurs et des pirates,
+	 * les déplacements sur le plateau, les duels, et la vérification des conditions de victoire.
+	 */
 	public void start() {
 		choisirJoueursEtPirates();
 		while (!jeuTermine) {
@@ -62,7 +73,13 @@ public class Jeu {
 			}
 		}
 	}
-
+	/**
+	 * @brief Détermine si un pirate a trouvé le trésor et termine le jeu si c'est le cas.
+	 * @param pirate Le pirate à vérifier.
+	 *
+	 * Si le pirate a atteint ou dépassé la dernière case du plateau, le jeu est terminé,
+	 * et ce pirate est déclaré gagnant.
+	 */
 	private void verifierTresorTrouve(Pirate pirate) {
 		if (pirate.getPosition() >= Plateau.getNbCases()) {
 			affichage.afficherMessage("Félicitations ! " + pirate.getNom() + ", le vaillant pirate en "
@@ -95,7 +112,14 @@ public class Jeu {
 	public Pirate[] getPirates() {
 		return listePirates;
 	}
-
+	/**
+	 * @brief Déplace un pirate sur le plateau en fonction du résultat d'un lancer de dé.
+	 * @param pirate Le pirate à déplacer.
+	 * @param valeurDe Le nombre de cases à déplacer le pirate.
+	 *
+	 * Calcule la nouvelle position du pirate sur le plateau, applique les effets de la case atteinte,
+	 * et vérifie les conditions de fin de jeu.
+	 */
 	public void deplacerPirate(Pirate pirate, int valeurDe) {
 	    if (jeuTermine) {
 	        return;
@@ -133,8 +157,13 @@ public class Jeu {
 		affichage.afficherGagnant(pirate);
 		jeuTermine = true;
 	}
-
-	public void choisirJoueursEtPirates() {
+	/**
+	 * @brief Génère les joueurs et assigne des pirates et des couleurs.
+	 *
+	 * Demande à l'utilisateur de choisir des noms de pirates et des couleurs pour chaque joueur,
+	 * initialisant ainsi les joueurs du jeu.
+	 */
+	private void choisirJoueursEtPirates() {
 		int nombreJoueurs = this.affichage.demanderNombreJoueurs();
 		listePirates = new Pirate[nombreJoueurs];
 
@@ -146,7 +175,15 @@ public class Jeu {
 			listePirates[i] = pirate;
 		}
 	}
-
+	/**
+	 * @brief Engage un duel entre deux pirates lorsqu'ils se rencontrent sur le plateau.
+	 * @param pirate1 Le premier pirate.
+	 * @param pirate2 Le second pirate.
+	 * @return Un booléen indiquant si un duel a eu lieu.
+	 *
+	 * Compare la force des armes des pirates et détermine le vainqueur du duel.
+	 * Le pirate perdant subit une perte de points de vie.
+	 */
 	public boolean engagerDuel(Pirate pirate1, Pirate pirate2) {
 
 		affichage.afficherMessage("Un duel est engagé entre " + pirate1.getNom() + " et " + pirate2.getNom() + ".");
@@ -176,17 +213,14 @@ public class Jeu {
 	}
 
 	public void verifierEtRetirerPiratesMorts() {
-		// Créer une liste temporaire pour les pirates vivants
+		// Créer une liste temporaire pour les pirates vivantsC
 		List<Pirate> piratesVivants = new ArrayList<>();
 
 		// Parcourir tous les pirates et ajouter les vivants à la liste temporaire
 		for (Pirate pirate : listePirates) {
 			if (!pirate.estMort()) {
 				piratesVivants.add(pirate);
-			} else {
-				// Gérer la logique liée à la mort du pirate, par exemple afficher un message
-				System.out.println("Le pirate " + pirate.getNom() + " est mort.");
-			}
+			} 
 		}
 
 		// Convertir la liste des pirates vivants en un nouveau tableau et le réaffecter
@@ -195,7 +229,6 @@ public class Jeu {
 	}
 
 	public IAffichage getAffichage() {
-		// TODO Auto-generated method stub
 		return affichage;
 	}
 

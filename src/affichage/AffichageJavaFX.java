@@ -1,3 +1,12 @@
+/**
+ * @class AffichageJavaFX
+ * @brief Implémentation de l'interface IAffichage utilisant JavaFX pour l'affichage graphique du jeu.
+ *
+ * Cette classe fournit une implémentation concrète pour afficher le plateau de jeu,
+ * les messages, et les interactions utilisateur à travers une interface graphique construite avec JavaFX.
+ */
+
+
 package affichage;
 
 import java.util.ArrayList;
@@ -20,15 +29,33 @@ import utils.Couleur;
 import utils.PirateNom;
 
 public class AffichageJavaFX implements IAffichage {
-
+	
+	// Le GridPane de JavaFX utilisé pour afficher le plateau de jeu.
 	private GridPane plateauGrid;
+	// Liste des noms de pirates déjà choisis par les joueurs.
 	private List<PirateNom> piratesDejaChoisis = new ArrayList<>();
+	// Liste des couleurs déjà choisies par les joueurs.
 	private List<Couleur> couleursDejaChoisies = new ArrayList<>();
 
-	// Constructeur
+	/**
+	 * @brief Constructeur pour l'affichage JavaFX.
+	 * @param plateauGrid Le GridPane de JavaFX utilisé pour afficher le plateau de jeu.
+	 *
+	 * Ce constructeur initialise l'affichage JavaFX avec le GridPane donné,
+	 * sur lequel le plateau de jeu et d'autres éléments graphiques seront dessinés.
+	 */
+
 	public AffichageJavaFX(GridPane plateauGrid) {
 		this.plateauGrid = plateauGrid;
 	}
+
+	/**
+	 * @brief Affiche le plateau de jeu sur l'interface graphique.
+	 * @param plateau L'objet Plateau contenant les données du plateau de jeu à afficher.
+	 *
+	 * Cette méthode dessine le plateau de jeu dans le GridPane, en utilisant différentes couleurs
+	 * pour représenter les types de cases. Chaque case est représentée par un Rectangle de JavaFX.
+	 */
 
 	@Override
 	public void afficherPlateau(Plateau plateau) {
@@ -91,6 +118,14 @@ public class AffichageJavaFX implements IAffichage {
 			}
 		}
 	}
+	
+	/**
+	 * @brief Affiche un message d'information à l'utilisateur.
+	 * @param message Le message à afficher dans une boîte de dialogue.
+	 *
+	 * Utilise un Alert de type INFORMATION pour montrer le message.
+	 */
+
 
 	@Override
 	public void afficherMessage(String message) {
@@ -127,6 +162,14 @@ public class AffichageJavaFX implements IAffichage {
 	}
 
 
+	/**
+	 * @brief Demande à l'utilisateur le nombre de joueurs participant au jeu.
+	 * @return Le nombre de joueurs choisi par l'utilisateur.
+	 *
+	 * Affiche une boîte de dialogue demandant le nombre de joueurs. La méthode valide
+	 * l'entrée de l'utilisateur et répète la demande jusqu'à ce qu'un nombre valide soit entré.
+	 * Si l'utilisateur annule la boîte de dialogue, l'application se ferme.
+	 */
 
 	@Override
 	public int demanderNombreJoueurs() {

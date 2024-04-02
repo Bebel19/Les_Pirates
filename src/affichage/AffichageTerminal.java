@@ -1,3 +1,11 @@
+/**
+ * @class AffichageTerminal
+ * @brief Implémentation de l'interface IAffichage pour un affichage en terminal.
+ *
+ * Cette classe offre une interface utilisateur simple en ligne de commande pour interagir avec le jeu,
+ * y compris l'affichage du plateau, des messages aux joueurs, et la prise de décisions.
+ */
+
 package affichage;
 
 import java.util.ArrayList;
@@ -15,9 +23,21 @@ import utils.Couleur;
 import utils.PirateNom;
 
 public class AffichageTerminal implements IAffichage {
+	// Scanner pour lire les entrées utilisateur depuis le terminal.
 	private Scanner scanner = new Scanner(System.in);
+	// Liste des noms de pirates disponibles pour la sélection par les joueurs.
 	private List<PirateNom> piratesDisponibles = new ArrayList<>(List.of(PirateNom.values()));
+	// Liste des couleurs disponibles pour la sélection par les joueurs.
 	private List<Couleur> couleursDisponibles = new ArrayList<>(List.of(Couleur.values()));
+
+	
+	/**
+	 * @brief Affiche les détails d'une case spécifique.
+	 * @param caseAfficher La case à afficher.
+	 *
+	 * Cette méthode imprime les informations de la case, y compris son numéro et son contenu,
+	 * tel qu'une arme ou du rhum, en ligne de commande.
+	 */
 
 	public void afficherCase(Case caseAfficher) {
 		if (caseAfficher == null) {
@@ -66,6 +86,13 @@ public class AffichageTerminal implements IAffichage {
 		// TODO Auto-generated method stub
 
 	}
+	/**
+	 * @brief Demande et valide le nombre de joueurs participant au jeu.
+	 * @return Le nombre de joueurs validé.
+	 *
+	 * Demande aux utilisateurs d'entrer le nombre de joueurs et valide cet input pour s'assurer
+	 * qu'il est dans une plage acceptable. Répète la demande jusqu'à recevoir un input valide.
+	 */
 
 	@Override
 	public int demanderNombreJoueurs() {
@@ -88,6 +115,13 @@ public class AffichageTerminal implements IAffichage {
 	    return nombreJoueurs;
 	}
 
+	/**
+	 * @brief Permet à l'utilisateur de choisir un pirate parmi les options disponibles.
+	 * @return Le nom du pirate choisi.
+	 *
+	 * Affiche une liste des pirates disponibles et demande à l'utilisateur d'en choisir un.
+	 * La sélection est faite via un input numérique correspondant à l'index du pirate.
+	 */
 
 	@Override
 	public PirateNom choisirPirate() {
@@ -117,6 +151,13 @@ public class AffichageTerminal implements IAffichage {
 	    PirateNom pirateChoisi = piratesDisponibles.remove(choix - 1);
 	    return pirateChoisi;
 	}
+	/**
+	 * @brief Permet à l'utilisateur de choisir une couleur parmi les options disponibles.
+	 * @return La couleur choisie.
+	 *
+	 * Affiche une liste des couleurs disponibles et demande à l'utilisateur d'en choisir une.
+	 * La sélection est faite via un input numérique correspondant à l'index de la couleur.
+	 */
 
 
 	@Override

@@ -248,7 +248,7 @@ public class JeuTest {
         jeu.deplacerPirate(pirate, 2); // Supposons que le déplacement se fait vers une case normale
 
         // Vérifier que le pirate est maintenant sur la nouvelle position
-        // TODO: Ajoutez ici des assertions pour vérifier le comportement attendu
+        // TODO: Ajouter ici des assertions pour vérifier le comportement attendu
     }
 
 }

@@ -2,8 +2,6 @@ package tests;
 
 import affichage.AffichageTerminal;
 import entites.Jeu;
-import entites.Pirate;
-import utils.Couleur;
 
 public class TestStart {
 	public static void main(String[] args) {

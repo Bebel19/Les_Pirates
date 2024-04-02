@@ -1,0 +1,102 @@
+\doxysection{entites.\+Case\+Arme Class Reference}
+\hypertarget{classentites_1_1_case_arme}{}\label{classentites_1_1_case_arme}\index{entites.CaseArme@{entites.CaseArme}}
+Inheritance diagram for entites.\+Case\+Arme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classentites_1_1_case_arme}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentites_1_1_case_arme_af737d48e6d4b049b3afa98cb34eb63bc}{Case\+Arme}} (int numero, \mbox{\hyperlink{enumutils_1_1_arme}{Arme}} arme)
+\begin{DoxyCompactList}\small\item\em Constructeur pour créer une case d\textquotesingle{}arme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentites_1_1_case_arme_abd7548f158bfd13b3d5276c5dd95a465}{appliquer\+Effet}} (\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}} pirate, \mbox{\hyperlink{classentites_1_1_jeu}{Jeu}} jeu)
+\begin{DoxyCompactList}\small\item\em Applique l\textquotesingle{}effet de trouver une arme sur la case au pirate qui y arrive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_arme}{Arme}} \mbox{\hyperlink{classentites_1_1_case_arme_a0accd768636741732790114e3fa52686}{get\+Arme}} ()
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}arme associée à cette case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classentites_1_1_case}{entites.\+Case}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classentites_1_1_case_a0aec152b478a6a714dc5e98e0a02dcb5}{get\+Numero}} ()
+\begin{DoxyCompactList}\small\item\em Obtient le numéro de la case. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutils_1_1_effet}{Effet}} \mbox{\hyperlink{classentites_1_1_case_a28fe00ad1fdb6f43dbb34e9efdc13636}{get\+Effet}} ()
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}effet associé à la case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classentites_1_1_case}{entites.\+Case}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentites_1_1_case_a23c9a8d5fe4d556b4d1242d6fa4ff9c4}{Case}} (int numero, \mbox{\hyperlink{enumutils_1_1_effet}{Effet}} effet)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe Case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classentites_1_1_case}{entites.\+Case}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries numero}
+\item 
+\mbox{\hyperlink{enumutils_1_1_effet}{Effet}} {\bfseries effet}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classentites_1_1_case_arme_af737d48e6d4b049b3afa98cb34eb63bc}\label{classentites_1_1_case_arme_af737d48e6d4b049b3afa98cb34eb63bc} 
+\index{entites.CaseArme@{entites.CaseArme}!CaseArme@{CaseArme}}
+\index{CaseArme@{CaseArme}!entites.CaseArme@{entites.CaseArme}}
+\doxysubsubsection{\texorpdfstring{CaseArme()}{CaseArme()}}
+{\footnotesize\ttfamily entites.\+Case\+Arme.\+Case\+Arme (\begin{DoxyParamCaption}\item[{int}]{numero,  }\item[{\mbox{\hyperlink{enumutils_1_1_arme}{Arme}}}]{arme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur pour créer une case d\textquotesingle{}arme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & Le numéro de la case. \\
+\hline
+{\em arme} & L\textquotesingle{}arme présente sur cette case. \begin{DoxyVerb}          Initialise une case avec une arme spécifiée. L'effet de cette
+          case est automatiquement défini comme étant Effet.ARME.
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classentites_1_1_case_arme_abd7548f158bfd13b3d5276c5dd95a465}\label{classentites_1_1_case_arme_abd7548f158bfd13b3d5276c5dd95a465} 
+\index{entites.CaseArme@{entites.CaseArme}!appliquerEffet@{appliquerEffet}}
+\index{appliquerEffet@{appliquerEffet}!entites.CaseArme@{entites.CaseArme}}
+\doxysubsubsection{\texorpdfstring{appliquerEffet()}{appliquerEffet()}}
+{\footnotesize\ttfamily void entites.\+Case\+Arme.\+appliquer\+Effet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentites_1_1_pirate}{Pirate}}}]{pirate,  }\item[{\mbox{\hyperlink{classentites_1_1_jeu}{Jeu}}}]{jeu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applique l\textquotesingle{}effet de trouver une arme sur la case au pirate qui y arrive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pirate} & Le pirate qui arrive sur la case. \\
+\hline
+{\em jeu} & L\textquotesingle{}instance du jeu permettant l\textquotesingle{}accès à l\textquotesingle{}affichage et à d\textquotesingle{}autres composantes du jeu.\\
+\hline
+\end{DoxyParams}
+Si le pirate n\textquotesingle{}a pas d\textquotesingle{}arme ou si l\textquotesingle{}arme sur la case est plus puissante que celle du pirate, le pirate prend la nouvelle arme. Sinon, un message indiquant que le pirate ne prend pas l\textquotesingle{}arme est affiché. 
+
+Reimplemented from \mbox{\hyperlink{classentites_1_1_case_ada8184537cea396078d1b4810eede938}{entites.\+Case}}.
+
+\Hypertarget{classentites_1_1_case_arme_a0accd768636741732790114e3fa52686}\label{classentites_1_1_case_arme_a0accd768636741732790114e3fa52686} 
+\index{entites.CaseArme@{entites.CaseArme}!getArme@{getArme}}
+\index{getArme@{getArme}!entites.CaseArme@{entites.CaseArme}}
+\doxysubsubsection{\texorpdfstring{getArme()}{getArme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutils_1_1_arme}{Arme}} entites.\+Case\+Arme.\+get\+Arme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}arme associée à cette case. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}arme présente sur cette case. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entites/Case\+Arme.\+java\end{DoxyCompactItemize}
