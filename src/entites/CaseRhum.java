@@ -12,9 +12,8 @@ public class CaseRhum extends Case {
 	@Override
 	public void appliquerEffet(Pirate pirate, Jeu jeu) {
 		De de = new De();
-		AffichageTerminal aff = new AffichageTerminal();
 		int valRecul =de.lancerDe();
-		aff.afficherIvresse(valRecul);
+		jeu.getAffichage().afficherIvresse(valRecul);
 		jeu.deplacerPirate(pirate, -valRecul);
 		
 	}

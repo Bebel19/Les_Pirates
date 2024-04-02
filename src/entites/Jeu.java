@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import affichage.AffichageTerminal;
 import affichage.IAffichage;
 import utils.PirateNom;
 import utils.Couleur;
@@ -188,6 +189,11 @@ public class Jeu {
 		// Convertir la liste des pirates vivants en un nouveau tableau et le réaffecter
 		// à listePirates
 		listePirates = piratesVivants.toArray(new Pirate[0]);
+	}
+
+	public IAffichage getAffichage() {
+		// TODO Auto-generated method stub
+		return affichage;
 	}
 
 }

@@ -11,12 +11,11 @@ import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ChoiceDialog;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.util.StringConverter;
+import utils.Arme;
 import utils.Couleur;
 import utils.PirateNom;
 
@@ -127,14 +126,7 @@ public class AffichageJavaFX implements IAffichage {
 		afficherPopup("Fin du tour de " + pirate.getNom(), "Le tour du pirate " + pirate.getNom() + " se termine.");
 	}
 
-	// Méthode utilitaire pour afficher une popup avec un titre et un message
-	private void afficherPopup(String titre, String message) {
-		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle(titre);
-		alert.setHeaderText(null);
-		alert.setContentText(message);
-		alert.showAndWait();
-	}
+
 
 	@Override
 	public int demanderNombreJoueurs() {
@@ -253,6 +245,24 @@ public class AffichageJavaFX implements IAffichage {
 	    public String toString() {
 	        return couleur.getNom();
 	    }
+	}
+	// Méthode utilitaire pour afficher une popup avec un titre et un message
+	private void afficherPopup(String titre, String message) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle(titre);
+		alert.setHeaderText(null);
+		alert.setContentText(message);
+		alert.showAndWait();
+	}
+	@Override
+	public void afficherIvresse(int valRecul) {
+	    afficherPopup("Attention à l'ivresse !","Trop de rhum ! Le pirate recule de " + valRecul + " case" + (valRecul > 1 ? "s." : "."));
+	}
+
+	@Override
+	public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
+	    afficherPopup("Le pirate trouve une arme",pirate.getNom() + " trouve " + nouvelleArme.getNom() + " avec une force de "
+	            + nouvelleArme.getForce() + " et décide de la prendre.");
 	}
 
 

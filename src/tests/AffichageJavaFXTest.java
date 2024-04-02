@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import utils.Arme;
 import utils.Couleur;
 import utils.PirateNom;
 
@@ -60,5 +61,11 @@ public class AffichageJavaFXTest extends Application {
         
         // Appeler la méthode choisirCouleur()
         Couleur couleurChoisie = affichageJavaFX.choisirCouleur();
+        
+        // Afficher l'ivresse du pirate
+        affichageJavaFX.afficherIvresse(4);
+
+        // Afficher le changement d'arme du pirate
+        affichageJavaFX.afficherChangementArme(pirateTest, Arme.PISTOLET);
     }
 }

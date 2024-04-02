@@ -4,6 +4,7 @@ import affichage.IAffichage;
 import entites.Case;
 import entites.Jeu;
 import entites.Pirate;
+import utils.Arme;
 import utils.Couleur;
 import utils.PirateNom;
 
@@ -69,6 +70,18 @@ public class JeuTest {
 			public Couleur choisirCouleur() {
 				// TODO Auto-generated method stub
 				return null;
+			}
+
+			@Override
+			public void afficherIvresse(int valRecul) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
+				// TODO Auto-generated method stub
+				
 			}
         };
 
@@ -136,6 +149,18 @@ public class JeuTest {
 				// TODO Auto-generated method stub
 				return null;
 			}
+
+			@Override
+			public void afficherIvresse(int valRecul) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
+				// TODO Auto-generated method stub
+				
+			}
         };
 
         // Créer un objet Jeu à tester
@@ -200,6 +225,18 @@ public class JeuTest {
 			public Couleur choisirCouleur() {
 				// TODO Auto-generated method stub
 				return null;
+			}
+
+			@Override
+			public void afficherIvresse(int valRecul) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
+				// TODO Auto-generated method stub
+				
 			}
         };
 

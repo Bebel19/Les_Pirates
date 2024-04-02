@@ -44,8 +44,6 @@ public class AffichageTerminal implements IAffichage {
 				+ caseArme.getArme().getForce() + ".");
 	}
 
-
-
 	public void afficherResultatDe(int resultatDe) {
 		if (resultatDe > 0) {
 			System.out.println("Le pirate avance de " + resultatDe + " case" + (resultatDe > 1 ? "s." : "."));
@@ -53,6 +51,8 @@ public class AffichageTerminal implements IAffichage {
 			System.out.println("Erreur : résultat de dé invalide.");
 		}
 	}
+	
+	@Override
 
 	public void afficherIvresse(int valRecul) {
 		System.out.println("Trop de rhum ! Le pirate recule de " + valRecul + " case" + (valRecul > 1 ? "s." : "."));
@@ -79,61 +79,60 @@ public class AffichageTerminal implements IAffichage {
 		}
 		return nombreJoueurs;
 	}
-	
+
 	@Override
 	public PirateNom choisirPirate() {
-	    try {
-	        System.out.println("Pirates disponibles : ");
-	        for (int i = 0; i < piratesDisponibles.size(); i++) {
-	            System.out.println((i + 1) + ". " + piratesDisponibles.get(i));
-	        }
-	        System.out.print("Choisissez un pirate : ");
-	        int choix = scanner.nextInt();
-	        // Vérifier si le choix est valide
-	        while (choix < 1 || choix > piratesDisponibles.size()) {
-	            System.out.println("Choix invalide. Veuillez choisir un pirate parmi les options disponibles.");
-	            System.out.print("Choisissez un pirate : ");
-	            choix = scanner.nextInt();
-	        }
-	        // Retirer le pirate choisi de la liste des pirates disponibles
-	        PirateNom pirateChoisi = piratesDisponibles.remove(choix - 1);
-	        return pirateChoisi;
-	    } catch (InputMismatchException e) {
-	        System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
-	        // Vider le scanner pour éviter une boucle infinie
-	        scanner.nextLine();
-	        return choisirPirate(); // Appel récursif pour redemander à l'utilisateur de saisir un pirate
-	    }
+		try {
+			System.out.println("Pirates disponibles : ");
+			for (int i = 0; i < piratesDisponibles.size(); i++) {
+				System.out.println((i + 1) + ". " + piratesDisponibles.get(i));
+			}
+			System.out.print("Choisissez un pirate : ");
+			int choix = scanner.nextInt();
+			// Vérifier si le choix est valide
+			while (choix < 1 || choix > piratesDisponibles.size()) {
+				System.out.println("Choix invalide. Veuillez choisir un pirate parmi les options disponibles.");
+				System.out.print("Choisissez un pirate : ");
+				choix = scanner.nextInt();
+			}
+			// Retirer le pirate choisi de la liste des pirates disponibles
+			PirateNom pirateChoisi = piratesDisponibles.remove(choix - 1);
+			return pirateChoisi;
+		} catch (InputMismatchException e) {
+			System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+			// Vider le scanner pour éviter une boucle infinie
+			scanner.nextLine();
+			return choisirPirate(); // Appel récursif pour redemander à l'utilisateur de saisir un pirate
+		}
 	}
 
 	@Override
 	public Couleur choisirCouleur() {
-	    try {
-	        System.out.println("Couleurs disponibles : ");
-	        for (int i = 0; i < couleursDisponibles.size(); i++) {
-	            System.out.println((i + 1) + ". " + couleursDisponibles.get(i));
-	        }
-	        System.out.print("Choisissez une couleur : ");
-	        int choix = scanner.nextInt();
-	        // Vérifier si le choix est valide
-	        while (choix < 1 || choix > couleursDisponibles.size()) {
-	            System.out.println("Choix invalide. Veuillez choisir une couleur parmi les options disponibles.");
-	            System.out.print("Choisissez une couleur : ");
-	            choix = scanner.nextInt();
-	        }
-	        // Retirer la couleur choisie de la liste des couleurs disponibles
-	        Couleur couleurChoisie = couleursDisponibles.remove(choix - 1);
-	        return couleurChoisie;
-	    } catch (InputMismatchException e) {
-	        System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
-	        // Vider le scanner pour éviter une boucle infinie
-	        scanner.nextLine();
-	        return choisirCouleur(); // Appel récursif pour redemander à l'utilisateur de saisir une couleur
-	    }
+		try {
+			System.out.println("Couleurs disponibles : ");
+			for (int i = 0; i < couleursDisponibles.size(); i++) {
+				System.out.println((i + 1) + ". " + couleursDisponibles.get(i));
+			}
+			System.out.print("Choisissez une couleur : ");
+			int choix = scanner.nextInt();
+			// Vérifier si le choix est valide
+			while (choix < 1 || choix > couleursDisponibles.size()) {
+				System.out.println("Choix invalide. Veuillez choisir une couleur parmi les options disponibles.");
+				System.out.print("Choisissez une couleur : ");
+				choix = scanner.nextInt();
+			}
+			// Retirer la couleur choisie de la liste des couleurs disponibles
+			Couleur couleurChoisie = couleursDisponibles.remove(choix - 1);
+			return couleurChoisie;
+		} catch (InputMismatchException e) {
+			System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
+			// Vider le scanner pour éviter une boucle infinie
+			scanner.nextLine();
+			return choisirCouleur(); // Appel récursif pour redemander à l'utilisateur de saisir une couleur
+		}
 	}
 
-
-
+	@Override
 	public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
 		System.out.println(pirate.getNom() + " trouve " + nouvelleArme.getNom() + " avec une force de "
 				+ nouvelleArme.getForce() + " et décide de la prendre.");
@@ -141,15 +140,15 @@ public class AffichageTerminal implements IAffichage {
 
 	@Override
 	public void afficherPlateau(Plateau plateau) {
-	    // Récupère la collection de cases du plateau
-	    Collection<Case> cases = plateau.getCases();
+		// Récupère la collection de cases du plateau
+		Collection<Case> cases = plateau.getCases();
 
-	    // Parcourt la collection et affiche le contenu de chaque case
-	    for (Case uneCase : cases) {
-	        int numeroCase = uneCase.getNumero();
-	        String contenuCase = uneCase.getEffet().toString();
-	        System.out.println("Case numéro " + numeroCase + " : " + contenuCase);
-	    }
+		// Parcourt la collection et affiche le contenu de chaque case
+		for (Case uneCase : cases) {
+			int numeroCase = uneCase.getNumero();
+			String contenuCase = uneCase.getEffet().toString();
+			System.out.println("Case numéro " + numeroCase + " : " + contenuCase);
+		}
 	}
 
 	@Override
@@ -159,27 +158,25 @@ public class AffichageTerminal implements IAffichage {
 
 	@Override
 	public void afficherPosition(int positionAfficher, Case caseCourante) {
-	    System.out.println("Numéro case : " + positionAfficher);
-	    // Vérifie le type de la case
-	    if (caseCourante instanceof CaseArme) {
-	        CaseArme caseArme = (CaseArme) caseCourante;
-	        System.out.println("Cette case contient une arme : " + caseArme.getArme());
-	    } else if (caseCourante instanceof CaseRhum) {
-	        System.out.println("Cette case contient du rhum. Attention à l'ivresse !");
-	    }
+		System.out.println("Numéro case : " + positionAfficher);
+		// Vérifie le type de la case
+		if (caseCourante instanceof CaseArme) {
+			CaseArme caseArme = (CaseArme) caseCourante;
+			System.out.println("Cette case contient une arme : " + caseArme.getArme());
+		} else if (caseCourante instanceof CaseRhum) {
+			System.out.println("Cette case contient du rhum. Attention à l'ivresse !");
+		}
 	}
 
-    @Override
+	@Override
 	public void afficherDebutTour(Pirate pirate) {
-		System.out.println("C'est le tour de " + pirate.getNom() + " [" + pirate.getCouleur() + "]. Il commence son tour sur la case : " + pirate.getPosition() + ".");
+		System.out.println("C'est le tour de " + pirate.getNom() + " [" + pirate.getCouleur()
+				+ "]. Il commence son tour sur la case : " + pirate.getPosition() + ".");
 	}
 
-    @Override
-    public void afficherFinTour(Pirate pirate) {
-        System.out.println("Fin du tour pour le pirate : " + pirate.getNom());
-    }
-
-	
-
+	@Override
+	public void afficherFinTour(Pirate pirate) {
+		System.out.println("Fin du tour pour le pirate : " + pirate.getNom());
+	}
 
 }
