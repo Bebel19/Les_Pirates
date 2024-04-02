@@ -19,6 +19,29 @@
 - Java 11 ou version supérieure.
 - JavaFX SDK 11 ou version supérieure.
 
+## Documentation Technique
+
+Une documentation technique détaillée a été générée avec Doxygen, offrant une vue approfondie de la structure interne du jeu, des classes, des méthodes et de l'architecture globale. Cette documentation est destinée aux développeurs souhaitant contribuer au projet ou comprendre son fonctionnement en détail.
+
+### Accéder à la Documentation
+
+La documentation Doxygen est disponible au format HTML et peut être consultée en ouvrant le fichier `index.html` situé dans le dossier `/docs` (ou le dossier que vous avez spécifié pour la sortie Doxygen) avec votre navigateur web préféré.
+
+### Générer la Documentation
+
+Si vous souhaitez générer la dernière version de la documentation à partir du code source :
+
+1. Assurez-vous que Doxygen est installé sur votre machine. Pour l'installer, visitez [le site officiel de Doxygen](http://www.doxygen.nl/).
+
+2. Naviguez vers le dossier racine du projet et exécutez la commande suivante (assurez-vous que le fichier de configuration `Doxyfile` est présent) :
+
+    ```shell
+    doxygen Doxyfile
+    ```
+
+    Cette commande générera la documentation dans le dossier spécifié dans votre `Doxyfile`, typiquement `/docs` ou `/doc`.
+
+
 ## Installation et Exécution
 
 Clonez le dépôt :
