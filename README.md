@@ -19,25 +19,17 @@
 - Java 11 ou version supérieure.
 - JavaFX SDK 11 ou version supérieure.
 
-## Installation
+## Installation et Exécution
 
-1. Clonez ce dépôt sur votre machine locale en utilisant `git clone https://github.com/Bebel19/Les_Pirates.git`.
-2. Assurez-vous que JavaFX est correctement configuré dans votre environnement de développement.
-3. Lancez l'application via votre IDE ou en ligne de commande :
+Clonez le dépôt :
 
 ```shell
-javac --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -d bin src/**/*.java
+git clone https://github.com/Bebel19/Les_Pirates.git
+cd Les_Pirates
 
-```
+## Pour la version javaFX (beta) :
+java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStartJavaFX
 
-```shell
-## Pour la version terminal dans la branche main
-
+## Pour la version console (terminal) : 
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStart
-```
-
-```shell
-## Pour la version javaFX (beta) dans la branche Les_Pirates_JavaFX
-
-java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu
 ```
