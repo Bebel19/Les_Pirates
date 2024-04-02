@@ -9,6 +9,7 @@ public enum Arme {
 
 	private final String nom;
 	private final int force;
+	private static final Random random = new Random();
 
 
 	Arme(String nom, int force) {
@@ -28,9 +29,9 @@ public enum Arme {
 
 
 	public static Arme obtenirArmeAleatoire() {
-		Random random = new Random();
-		List<Arme> armesPossibles = Arrays.asList(values());
-		armesPossibles = armesPossibles.stream().filter(arme -> arme != POING).toList();
-		return armesPossibles.get(random.nextInt(armesPossibles.size()));
+	    List<Arme> armesPossibles = Arrays.stream(values())
+	                                      .filter(arme -> arme != POING)
+	                                      .collect(Collectors.toList());
+	    return armesPossibles.get(random.nextInt(armesPossibles.size()));
 	}
 }
