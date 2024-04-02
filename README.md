@@ -25,7 +25,7 @@ Une documentation technique détaillée a été générée avec Doxygen, offrant
 
 ### Accéder à la Documentation
 
-La documentation Doxygen est disponible au format HTML et peut être consultée en ouvrant le fichier `index.html` situé dans le dossier `/HTML` (ou le dossier que vous avez spécifié pour la sortie Doxygen) avec votre navigateur web préféré.
+La documentation Doxygen est disponible au format HTML et peut être consultée en ouvrant le fichier `index.html` situé dans le dossier `/HTML` avec votre navigateur web préféré.
 
 ### Générer la Documentation
 
