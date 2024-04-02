@@ -115,4 +115,9 @@ public class Plateau {
 		cases.put(NOMBRE_CASES , new CaseWin(NOMBRE_CASES ));
 
 	}
+
+	public int getLargeur() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

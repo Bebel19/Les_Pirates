@@ -83,6 +83,12 @@ public class JeuTest {
 				// TODO Auto-generated method stub
 				
 			}
+
+			@Override
+			public void afficherPirates(Pirate[] pirates) {
+				// TODO Auto-generated method stub
+				
+			}
         };
 
         // Créer un objet Jeu à tester
@@ -161,6 +167,12 @@ public class JeuTest {
 				// TODO Auto-generated method stub
 				
 			}
+
+			@Override
+			public void afficherPirates(Pirate[] pirates) {
+				// TODO Auto-generated method stub
+				
+			}
         };
 
         // Créer un objet Jeu à tester
@@ -235,6 +247,12 @@ public class JeuTest {
 
 			@Override
 			public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void afficherPirates(Pirate[] pirates) {
 				// TODO Auto-generated method stub
 				
 			}

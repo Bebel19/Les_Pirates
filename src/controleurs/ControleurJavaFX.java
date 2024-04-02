@@ -40,7 +40,9 @@ public class ControleurJavaFX {
     private void effectuerTourPirate(Pirate pirate) {				
 		Set<Pirate> piratesAyantCombattu = new HashSet<>();
 	if (!piratesAyantCombattu.contains(pirate)) {
+		affichage.afficherPirates(jeu.getPirates());
 		affichage.afficherDebutTour(pirate); // Afficher le début du tour
+		
 		int lance = jeu.getDe().lancerDe();
 		jeu.deplacerPirate(pirate, lance);
 		for (Pirate autrePirate : jeu.getPirates()) {
@@ -53,6 +55,7 @@ public class ControleurJavaFX {
 				}
 			}
 		}
+		affichage.afficherPirates(jeu.getPirates());
 		affichage.afficherFinTour(pirate); // Afficher la fin du tour
 		jeu.verifierTresorTrouve(pirate); // Vérifier si le pirate a trouvé le trésor
 		jeu.verifierDernierPirateRestant(); // Vérifier s'il ne reste qu'un seul pirate en jeu

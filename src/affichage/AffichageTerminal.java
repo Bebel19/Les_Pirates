@@ -234,6 +234,12 @@ public class AffichageTerminal implements IAffichage {
 	public void afficherFinTour(Pirate pirate) {
 		System.out.println("Fin du tour pour le pirate : " + pirate.getNom());
 	}
+
+	@Override
+	public void afficherPirates(Pirate[] pirates) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

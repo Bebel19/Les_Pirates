@@ -23,6 +23,7 @@ import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import utils.Arme;
 import utils.Couleur;
@@ -117,6 +118,29 @@ public class AffichageJavaFX implements IAffichage {
 				}
 			}
 		}
+	}
+	
+	@Override
+	
+	public void afficherPirates(Pirate[] listePirates) {
+	        int nbCases = Plateau.getNbCases();
+	        int numRows = (int) Math.ceil(Math.sqrt(nbCases));
+	        int numCols = (int) Math.ceil((double) nbCases / numRows);
+
+	        for (Pirate pirate : listePirates) {
+	            // Supposons que chaque pirate a une propriété 'position' indiquant sa position linéaire
+	            int position = pirate.getPosition(); // Position linéaire 0 à (nbCases-1)
+	            int row = position / numCols;
+	            int col = position % numCols;
+	            
+	            Circle pirateCircle = new Circle(10);
+	            pirateCircle.setFill(Color.RED); // Assurez-vous de la correspondance
+	            GridPane.setConstraints(pirateCircle, col, row);
+	        // Ajoutez le cercle au GridPane à la position calculée
+	        GridPane.setRowIndex(pirateCircle, row);
+	        GridPane.setColumnIndex(pirateCircle, col);
+	        plateauGrid.getChildren().add(pirateCircle);
+	    }
 	}
 	
 	/**
