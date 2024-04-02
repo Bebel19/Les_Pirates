@@ -25,6 +25,7 @@ public class Jeu {
 	private De de;
 	private IAffichage affichage;
 	private boolean jeuTermine = false;
+	private Pirate pirateGagnant = null;
 	/**
 	 * @brief Constructeur du jeu avec affichage spécifié.
 	 * @param affichage L'interface d'affichage utilisée pour interagir avec l'utilisateur.
@@ -80,7 +81,7 @@ public class Jeu {
 	 * Si le pirate a atteint ou dépassé la dernière case du plateau, le jeu est terminé,
 	 * et ce pirate est déclaré gagnant.
 	 */
-	private void verifierTresorTrouve(Pirate pirate) {
+	public void verifierTresorTrouve(Pirate pirate) {
 		if (pirate.getPosition() >= Plateau.getNbCases()) {
 			affichage.afficherMessage("Félicitations ! " + pirate.getNom() + ", le vaillant pirate en "
 					+ pirate.getCouleur() + ", a trouvé le trésor !");
@@ -88,7 +89,7 @@ public class Jeu {
 		}
 	}
 
-	private void verifierDernierPirateRestant() {
+	public void verifierDernierPirateRestant() {
 	    int piratesRestants = 0;
 	    for (Pirate p : listePirates) {
 	        if (p.getPosition() < Plateau.getNbCases()) {
@@ -99,6 +100,7 @@ public class Jeu {
 	        // Trouver le seul pirate restant en jeu
 	        for (Pirate p : listePirates) {
 	            if (p.getPosition() >= Plateau.getNbCases()) {
+	            	pirateGagnant = p;
 	                affichage.afficherMessage(
 	                        "Félicitations ! " + p.getNom() + ", le dernier pirate en jeu, remporte la partie !");
 	                jeuTermine = true;
@@ -154,6 +156,7 @@ public class Jeu {
 
 
 	public void terminerJeu(Pirate pirate) {
+		pirateGagnant = pirate;
 		affichage.afficherGagnant(pirate);
 		jeuTermine = true;
 	}
@@ -163,7 +166,7 @@ public class Jeu {
 	 * Demande à l'utilisateur de choisir des noms de pirates et des couleurs pour chaque joueur,
 	 * initialisant ainsi les joueurs du jeu.
 	 */
-	private void choisirJoueursEtPirates() {
+	public void choisirJoueursEtPirates() {
 		int nombreJoueurs = this.affichage.demanderNombreJoueurs();
 		listePirates = new Pirate[nombreJoueurs];
 
@@ -227,9 +230,29 @@ public class Jeu {
 		// à listePirates
 		listePirates = piratesVivants.toArray(new Pirate[0]);
 	}
-
+	
+	public boolean getJeuTermine() {
+		return jeuTermine;
+	}
+	public void setJeuTermine(boolean jeuTermine) {
+		this.jeuTermine = jeuTermine;
+	}
 	public IAffichage getAffichage() {
 		return affichage;
+	}
+
+	public Plateau getPlateau() {
+		return plateau;
+	}
+
+	public De getDe() {
+		// TODO Auto-generated method stub
+		return de;
+	}
+
+	public Pirate getPirateGagnant() {
+		// TODO Auto-generated method stub
+		return pirateGagnant;
 	}
 
 }

@@ -203,9 +203,7 @@ public class AffichageTerminal implements IAffichage {
 
 		// Parcourt la collection et affiche le contenu de chaque case
 		for (Case uneCase : cases) {
-			int numeroCase = uneCase.getNumero();
-			String contenuCase = uneCase.getEffet().toString();
-			System.out.println("Case numéro " + numeroCase + " : " + contenuCase);
+			afficherCase(uneCase);
 		}
 	}
 
@@ -236,5 +234,6 @@ public class AffichageTerminal implements IAffichage {
 	public void afficherFinTour(Pirate pirate) {
 		System.out.println("Fin du tour pour le pirate : " + pirate.getNom());
 	}
+	
 
 }
