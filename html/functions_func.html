@@ -5,11 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Class Members - Functions</title>
+<title>La légende Kaizoku: poudre noire et rhum doré: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -22,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.webp"/></td>
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">La légende Kaizoku: poudre noire et rhum doré
    </div>
   </td>
  </tr>
@@ -49,6 +54,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('functions_func.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,11 +92,13 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented functions with links to the class documentation for each member:</div>
+<div class="textblock">Here is a list of all functions with links to the classes they belong to:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>AffichageJavaFX()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a5e8a899ec8dc79751b86efcc3841abfa">affichage.AffichageJavaFX</a></li>
+<li>afficherArme()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_terminal.html#a8ae4fef7cc6f3c20a12c08bf5d9c497a">affichage.AffichageTerminal</a></li>
 <li>afficherCase()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_terminal.html#a540270931fff3b12b9f51b2bfd0105ad">affichage.AffichageTerminal</a></li>
+<li>afficherCaseNormale()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_terminal.html#a0c9508b99beec1cc5429306bbf47917c">affichage.AffichageTerminal</a></li>
 <li>afficherChangementArme()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a67f1cc656dd50eb5d095277ed55f328c">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#a0b1c92869de54fe2e16ab9468a37968c">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#ac1683599d01d216d93d791a60c85477e">affichage.IAffichage</a></li>
 <li>afficherDebutTour()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a92ced980e54314dd9e83d4e67b43bc43">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#aa3f4cf2f3b2b10c7cbc48f61d5f42ffc">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#a08a5c5aa5fb5007f699a37f340b2e7e8">affichage.IAffichage</a></li>
 <li>afficherFinTour()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#abddf8717678fc59f4ca4c854263fbbf4">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#afa2c0a7b3a9f68d96607c5e58b088848">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#ae3c61c1924538cc698f5ef3eaa784720">affichage.IAffichage</a></li>
@@ -83,21 +106,26 @@ $(function() {
 <li>afficherIvresse()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a5d767e5294405779412a4462a26e5ae3">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#aa049da84da9a9ffb0e59a591b1b4f9f9">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#a0a23f4b6d91837d8d069857560c22815">affichage.IAffichage</a></li>
 <li>afficherMessage()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a84129d0b2e4817a462c7d9097cdc7db7">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#a1633b234809283dcd964b82fcda6d2f0">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#aedb2fe957d4965f43b53824c0126d381">affichage.IAffichage</a></li>
 <li>afficherPlateau()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a49a72c571bbe5766908bd6b291da5b45">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#a925ee9e2e288b4b6ef96fc367ad35079">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#aa193f149927ade31b465ead89f22ea8a">affichage.IAffichage</a></li>
+<li>afficherPopup()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#ad0767b23681d9f0dbbecb61d0c5cbb27">affichage.AffichageJavaFX</a></li>
 <li>afficherPosition()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a1d6e683ab38045c496b2e3fb7cbbcabb">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#a8a4e8401cd11dbb01c7b40aee6aba840">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#a4b3d4ff91cbf6d4e55437acc50b25838">affichage.IAffichage</a></li>
+<li>afficherResultatDe()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_terminal.html#a95d05778d4bf3bdc0f07cb8d06ecb922">affichage.AffichageTerminal</a></li>
 <li>appliquerEffet()&#160;:&#160;<a class="el" href="classentites_1_1_case.html#ada8184537cea396078d1b4810eede938">entites.Case</a>, <a class="el" href="classentites_1_1_case_arme.html#abd7548f158bfd13b3d5276c5dd95a465">entites.CaseArme</a>, <a class="el" href="classentites_1_1_case_rhum.html#a46d2741d1f316fe33c2c10b01a32d0d3">entites.CaseRhum</a>, <a class="el" href="classentites_1_1_case_win.html#af3c6e3f931d68095a71e23c0cabdf4ad">entites.CaseWin</a></li>
 <li>Arme()&#160;:&#160;<a class="el" href="enumutils_1_1_arme.html#a42e6faf86ec063d80c207f8cacd00757">utils.Arme</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>calculerNouvellePosition()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#aa81e57c7ac69b31f0870595cc2ac0621">entites.Jeu</a></li>
 <li>calculPosition()&#160;:&#160;<a class="el" href="classentites_1_1_plateau.html#a41f041b43731960d99b48390ac3b97ba">entites.Plateau</a></li>
 <li>Case()&#160;:&#160;<a class="el" href="classentites_1_1_case.html#a23c9a8d5fe4d556b4d1242d6fa4ff9c4">entites.Case</a></li>
 <li>CaseArme()&#160;:&#160;<a class="el" href="classentites_1_1_case_arme.html#af737d48e6d4b049b3afa98cb34eb63bc">entites.CaseArme</a></li>
 <li>CaseRhum()&#160;:&#160;<a class="el" href="classentites_1_1_case_rhum.html#a24980775d31bde3ff7f990bcfd64533e">entites.CaseRhum</a></li>
 <li>CaseWin()&#160;:&#160;<a class="el" href="classentites_1_1_case_win.html#a478d9993ce36538574cbfc5fb5e1b681">entites.CaseWin</a></li>
 <li>choisirCouleur()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#a3205bfe5c62fab64a1bf222ab6325c45">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#ab4ec0d77fc3c0798dde4826e03415938">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#a9605c6d23508d8f56c7cc3bed0740f95">affichage.IAffichage</a></li>
+<li>choisirJoueursEtPirates()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#afcf8e5afc4986be4b16be3cf3422ed2f">entites.Jeu</a></li>
 <li>choisirPirate()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x.html#ac0eaae948c9d669ddf51f1eef07fe31c">affichage.AffichageJavaFX</a>, <a class="el" href="classaffichage_1_1_affichage_terminal.html#ae9111f85713c8bd6ef9f243138801970">affichage.AffichageTerminal</a>, <a class="el" href="interfaceaffichage_1_1_i_affichage.html#aeb092ca39110deee657e02dc696ccb2e">affichage.IAffichage</a></li>
 <li>Couleur()&#160;:&#160;<a class="el" href="enumutils_1_1_couleur.html#a4c0a9d098f435b417fb10a81fd3eb237">utils.Couleur</a></li>
+<li>CouleurOption()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a08deac6485cbd8e6c976170c16b1df8a">affichage.AffichageJavaFX.CouleurOption</a></li>
 </ul>
 
 
@@ -115,16 +143,19 @@ $(function() {
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>genererPlateau()&#160;:&#160;<a class="el" href="classentites_1_1_plateau.html#aa8359154f55d6e0b91631a63db9cfa12">entites.Plateau</a></li>
+<li>getAffichage()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a4bb02f6acebcd8f1084f257e1bb130d7">entites.Jeu</a></li>
 <li>getArme()&#160;:&#160;<a class="el" href="classentites_1_1_case_arme.html#a0accd768636741732790114e3fa52686">entites.CaseArme</a>, <a class="el" href="classentites_1_1_pirate.html#a99110c09c83f058aa0852143684f49ca">entites.Pirate</a></li>
 <li>getCase()&#160;:&#160;<a class="el" href="classentites_1_1_plateau.html#a86e81a9c3f33e7f5c17b654e0e34ca84">entites.Plateau</a></li>
 <li>getCases()&#160;:&#160;<a class="el" href="classentites_1_1_plateau.html#a8ef08aa4d0713257d6c93944f32526e5">entites.Plateau</a></li>
 <li>getCode()&#160;:&#160;<a class="el" href="enumutils_1_1_couleur.html#ab356d027eee399c99dabfa31840565d5">utils.Couleur</a></li>
-<li>getCouleur()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#a4954791f5ee648010f20c56d280b8486">entites.Pirate</a></li>
+<li>getCouleur()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a6e41bc0d4a5c5b9eb4d41e8704a5ce50">affichage.AffichageJavaFX.CouleurOption</a>, <a class="el" href="classentites_1_1_pirate.html#a4954791f5ee648010f20c56d280b8486">entites.Pirate</a></li>
 <li>getEffet()&#160;:&#160;<a class="el" href="classentites_1_1_case.html#a28fe00ad1fdb6f43dbb34e9efdc13636">entites.Case</a></li>
 <li>getForce()&#160;:&#160;<a class="el" href="enumutils_1_1_arme.html#a31bbd6187d6ab7acca25204c32c4396b">utils.Arme</a></li>
 <li>getNbCases()&#160;:&#160;<a class="el" href="classentites_1_1_plateau.html#a00eb03037cbb281c22bd0a2c95fe8344">entites.Plateau</a></li>
 <li>getNom()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#a722e38c4e3d91dd8971e5d14de04c7b4">entites.Pirate</a>, <a class="el" href="enumutils_1_1_arme.html#a8a6a9f7344a9a4bc4e0d7c858ec02240">utils.Arme</a>, <a class="el" href="enumutils_1_1_couleur.html#a8e8e629c367fc887dae25807293b33a5">utils.Couleur</a></li>
 <li>getNumero()&#160;:&#160;<a class="el" href="classentites_1_1_case.html#a0aec152b478a6a714dc5e98e0a02dcb5">entites.Case</a></li>
+<li>getPirates()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#ab1cb1dc08ee45524be92eb343950d279">entites.Jeu</a></li>
 <li>getPosition()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#abc0e06afc015a634a165ad4f72ee18ab">entites.Pirate</a></li>
 <li>getPv()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#ae21b6b68d8f2d015b1d21d1fe35944fc">entites.Pirate</a></li>
 </ul>
@@ -137,6 +168,11 @@ $(function() {
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>lancerDe()&#160;:&#160;<a class="el" href="classentites_1_1_de.html#a742fa5434be2a1123d46caac1feaf407">entites.De</a></li>
+</ul>
+
+
+<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>main()&#160;:&#160;<a class="el" href="classtests_1_1_affichage_java_f_x_test.html#a37419ccf4e805524a8dc2260eeeb2cf9">tests.AffichageJavaFXTest</a>, <a class="el" href="classtests_1_1_jeu_test.html#af28e2adb477f6de1b25d25eb0e8972bf">tests.JeuTest</a>, <a class="el" href="classtests_1_1_test_deplacements.html#aa1e07ef8effdc399baa86cbae1ddfa9a">tests.TestDeplacements</a>, <a class="el" href="classtests_1_1_test_plateau.html#a946e693c829a1dfb543e6f6c258620ae">tests.TestPlateau</a>, <a class="el" href="classtests_1_1_test_start.html#a591a17d4a7aab7ebe424860386e7e106">tests.TestStart</a>, <a class="el" href="classtests_1_1_test_start_java_f_x.html#a05bf09d6f22d2d2ef4a78d8951bf41ef">tests.TestStartJavaFX</a></li>
 </ul>
 
 
@@ -155,17 +191,31 @@ $(function() {
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>setArme()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#aea33d544e67fb4153ffc7f43efc82d09">entites.Pirate</a></li>
 <li>setPosition()&#160;:&#160;<a class="el" href="classentites_1_1_pirate.html#a9f311c9fae3f92794b61a5f736e48f1a">entites.Pirate</a></li>
-<li>start()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a03474c0cf923ca7ba6725086cf9dacd9">entites.Jeu</a></li>
+<li>start()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a03474c0cf923ca7ba6725086cf9dacd9">entites.Jeu</a>, <a class="el" href="classtests_1_1_affichage_java_f_x_test.html#ab59d5741a464c321b28cd4ba7f73c585">tests.AffichageJavaFXTest</a>, <a class="el" href="classtests_1_1_test_start_java_f_x.html#a5e07eab705e04c9bfde65f41565f54a8">tests.TestStartJavaFX</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>toString()&#160;:&#160;<a class="el" href="enumutils_1_1_couleur.html#abb95764ad303a878fa836f275bb5a07b">utils.Couleur</a></li>
+<li>terminerJeu()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a73aa0c0a6c2950780075e0c212766e7b">entites.Jeu</a></li>
+<li>testDeplacerPirate()&#160;:&#160;<a class="el" href="classtests_1_1_jeu_test.html#a6205da812204843f2995d8759befee8b">tests.JeuTest</a></li>
+<li>testDeplacerPirateVersCaseNormale()&#160;:&#160;<a class="el" href="classtests_1_1_jeu_test.html#a10309fe3beb7cf7f7fc7424b1bc4724e">tests.JeuTest</a></li>
+<li>testEngagerDuel()&#160;:&#160;<a class="el" href="classtests_1_1_jeu_test.html#a6e6871e785b232b819460670d265217f">tests.JeuTest</a></li>
+<li>toString()&#160;:&#160;<a class="el" href="classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#ac7d1f2dd0c200359f708de94ab1ef22a">affichage.AffichageJavaFX.CouleurOption</a>, <a class="el" href="enumutils_1_1_couleur.html#abb95764ad303a878fa836f275bb5a07b">utils.Couleur</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>verifierDernierPirateRestant()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#ab1018cd60733bad649cd0c293a852adf">entites.Jeu</a></li>
+<li>verifierEtRetirerPiratesMorts()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a69096efc4db60e6e242e0f4be5d6445a">entites.Jeu</a></li>
+<li>verifierTresorTrouve()&#160;:&#160;<a class="el" href="classentites_1_1_jeu.html#a67d1462222ba8823d6968c215633b440">entites.Jeu</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
 </body>
 </html>

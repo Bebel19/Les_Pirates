@@ -5,11 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Les Pirates</title>
+<title>La légende Kaizoku: poudre noire et rhum doré: Les Pirates</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -22,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.webp"/></td>
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">La légende Kaizoku: poudre noire et rhum doré
    </div>
   </td>
  </tr>
@@ -48,6 +53,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -69,32 +91,31 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div><div class="header">
   <div class="headertitle"><div class="title">Les Pirates</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><p><a class="anchor" id="les-pirates"></a> </p>
+<h1><a class="anchor" id="description"></a>
 Description</h1>
 <p>"Les Pirates" est un jeu de plateau interactif développé en Java avec JavaFX. Le jeu invite les joueurs à incarner des pirates naviguant à travers des mers dangereuses à la recherche d'un trésor caché. Chaque joueur doit surmonter des obstacles (cases rhum), ramasser des armes (case arme), combattre des adversaires (duels) et atteindre le trésor à la derniere case (case win).</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="fonctionnalités"></a>
 Fonctionnalités</h1>
 <ul>
-<li><b>Jeu Multijoueur</b> : Supporte 2 à 10 joueurs, chacun choisissant un pirate unique et une couleur distinctive.</li>
-<li><b>Plateau Dynamique</b> : Le plateau de jeu comporte 30 cases, chacune offrant des défis ou des avantages spécifiques (rhums , armes, trésor).</li>
+<li><b><a class="el" href="class_jeu.html" title="Classe principale qui g�re la logique du jeu.">Jeu</a> Multijoueur</b> : Supporte 2 à 10 joueurs, chacun choisissant un pirate unique et une couleur distinctive.</li>
+<li><b><a class="el" href="class_plateau.html" title="Classe repr�sentant le plateau de jeu.">Plateau</a> Dynamique</b> : Le plateau de jeu comporte 30 cases, chacune offrant des défis ou des avantages spécifiques (rhums , armes, trésor).</li>
 <li><b>Combats de Pirates</b> : Les joueurs peuvent s'affronter en duel lorsqu'ils se retrouvent sur des cases proches.</li>
 <li><b>Sélection de Personnages</b> : Les joueurs choisissent parmi une variété de pirates.</li>
 <li><b>Armes à récupérer</b> : Les pirates peuvent trouver des armes tels que le pistolet, le mousquet , le sabre ou seulement leurs poings si ils n'ont pas de chance.</li>
 <li><b>BETA : Interface Graphique</b> : Une interface utilisateur riche et intuitive grâce à JavaFX, facilitant l'interaction et l'immersion dans le jeu.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="prérequis"></a>
 Prérequis</h1>
 <ul>
 <li>Java 11 ou version supérieure.</li>
 <li>JavaFX SDK 11 ou version supérieure.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="installation"></a>
 Installation</h1>
 <ol type="1">
 <li>Clonez ce dépôt sur votre machine locale en utilisant <code>git clone <a href="https://github.com/Bebel19/Les_Pirates.git">https://github.com/Bebel19/Les_Pirates.git</a></code>.</li>
@@ -110,9 +131,12 @@ Installation</h1>
 <div class="line">java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,262 @@
+.TH "affichage.AffichageTerminal" 3 "La lÃ©gende Kaizoku: poudre noire et rhum dorÃ©" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+affichage.AffichageTerminal
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaffichage\&.IAffichage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBafficherCase\fP (\fBCase\fP caseAfficher)"
+.br
+.RI "Affiche les détails d'une case spécifique\&. "
+.ti -1c
+.RI "void \fBafficherArme\fP (\fBCaseArme\fP caseArme)"
+.br
+.ti -1c
+.RI "void \fBafficherResultatDe\fP (int resultatDe)"
+.br
+.ti -1c
+.RI "void \fBafficherIvresse\fP (int valRecul)"
+.br
+.RI "Affiche un avertissement quand un pirate subit l'effet d'ivresse\&. "
+.ti -1c
+.RI "void \fBafficherGagnant\fP (\fBPirate\fP gagnant)"
+.br
+.RI "Affiche le gagnant du jeu\&. "
+.ti -1c
+.RI "void \fBafficherCaseNormale\fP (int nouvellePosition)"
+.br
+.ti -1c
+.RI "int \fBdemanderNombreJoueurs\fP ()"
+.br
+.RI "Demande et valide le nombre de joueurs participant au jeu\&. "
+.ti -1c
+.RI "\fBPirateNom\fP \fBchoisirPirate\fP ()"
+.br
+.RI "Permet à l'utilisateur de choisir un pirate parmi les options disponibles\&. "
+.ti -1c
+.RI "\fBCouleur\fP \fBchoisirCouleur\fP ()"
+.br
+.RI "Permet à l'utilisateur de choisir une couleur parmi les options disponibles\&. "
+.ti -1c
+.RI "void \fBafficherChangementArme\fP (\fBPirate\fP pirate, \fBArme\fP nouvelleArme)"
+.br
+.RI "Affiche un changement d'arme pour un pirate\&. "
+.ti -1c
+.RI "void \fBafficherPlateau\fP (\fBPlateau\fP plateau)"
+.br
+.RI "Affiche le plateau de jeu\&. "
+.ti -1c
+.RI "void \fBafficherMessage\fP (String message)"
+.br
+.RI "Affiche un message à l'utilisateur\&. "
+.ti -1c
+.RI "void \fBafficherPosition\fP (int positionAfficher, \fBCase\fP caseCourante)"
+.br
+.RI "Affiche la position actuelle d'une case et son contenu\&. "
+.ti -1c
+.RI "void \fBafficherDebutTour\fP (\fBPirate\fP pirate)"
+.br
+.RI "Affiche le début du tour d'un pirate\&. "
+.ti -1c
+.RI "void \fBafficherFinTour\fP (\fBPirate\fP pirate)"
+.br
+.RI "Affiche la fin du tour d'un pirate\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Scanner \fBscanner\fP = new Scanner(System\&.in)"
+.br
+.ti -1c
+.RI "List< \fBPirateNom\fP > \fBpiratesDisponibles\fP = new ArrayList<>(List\&.of(PirateNom\&.values()))"
+.br
+.ti -1c
+.RI "List< \fBCouleur\fP > \fBcouleursDisponibles\fP = new ArrayList<>(List\&.of(Couleur\&.values()))"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void affichage\&.AffichageTerminal\&.afficherArme (\fBCaseArme\fP caseArme)"
+
+.SS "void affichage\&.AffichageTerminal\&.afficherCase (\fBCase\fP caseAfficher)"
+
+.PP
+Affiche les détails d'une case spécifique\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcaseAfficher\fP La case à afficher\&.
+.RE
+.PP
+Cette méthode imprime les informations de la case, y compris son numéro et son contenu, tel qu'une arme ou du rhum, en ligne de commande\&. 
+.SS "void affichage\&.AffichageTerminal\&.afficherCaseNormale (int nouvellePosition)"
+
+.SS "void affichage\&.AffichageTerminal\&.afficherChangementArme (\fBPirate\fP pirate, \fBArme\fP nouvelleArme)"
+
+.PP
+Affiche un changement d'arme pour un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate qui change d'arme\&. 
+.br
+\fInouvelleArme\fP La nouvelle arme obtenue par le pirate\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherDebutTour (\fBPirate\fP pirate)"
+
+.PP
+Affiche le début du tour d'un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate dont le tour commence\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherFinTour (\fBPirate\fP pirate)"
+
+.PP
+Affiche la fin du tour d'un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate dont le tour se termine\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherGagnant (\fBPirate\fP pirate)"
+
+.PP
+Affiche le gagnant du jeu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate qui a gagné le jeu\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherIvresse (int valRecul)"
+
+.PP
+Affiche un avertissement quand un pirate subit l'effet d'ivresse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalRecul\fP Le nombre de cases que le pirate recule à cause de l'ivresse\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherMessage (String message)"
+
+.PP
+Affiche un message à l'utilisateur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP Le message à afficher\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherPlateau (\fBPlateau\fP plateau)"
+
+.PP
+Affiche le plateau de jeu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplateau\fP L'objet \fBPlateau\fP représentant l'état actuel du jeu à afficher\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherPosition (int positionAfficher, \fBCase\fP caseCourante)"
+
+.PP
+Affiche la position actuelle d'une case et son contenu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpositionAfficher\fP Le numéro de la case à afficher\&. 
+.br
+\fIcaseCourante\fP La case à afficher\&. 
+.RE
+.PP
+
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "void affichage\&.AffichageTerminal\&.afficherResultatDe (int resultatDe)"
+
+.SS "\fBCouleur\fP affichage\&.AffichageTerminal\&.choisirCouleur ()"
+
+.PP
+Permet à l'utilisateur de choisir une couleur parmi les options disponibles\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La couleur choisie\&.
+.RE
+.PP
+Affiche une liste des couleurs disponibles et demande à l'utilisateur d'en choisir une\&. La sélection est faite via un input numérique correspondant à l'index de la couleur\&. 
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "\fBPirateNom\fP affichage\&.AffichageTerminal\&.choisirPirate ()"
+
+.PP
+Permet à l'utilisateur de choisir un pirate parmi les options disponibles\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nom du pirate choisi\&.
+.RE
+.PP
+Affiche une liste des pirates disponibles et demande à l'utilisateur d'en choisir un\&. La sélection est faite via un input numérique correspondant à l'index du pirate\&. 
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SS "int affichage\&.AffichageTerminal\&.demanderNombreJoueurs ()"
+
+.PP
+Demande et valide le nombre de joueurs participant au jeu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de joueurs validé\&.
+.RE
+.PP
+Demande aux utilisateurs d'entrer le nombre de joueurs et valide cet input pour s'assurer qu'il est dans une plage acceptable\&. Répète la demande jusqu'à recevoir un input valide\&. 
+.PP
+Implements \fBaffichage\&.IAffichage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "List<\fBCouleur\fP> affichage\&.AffichageTerminal\&.couleursDisponibles = new ArrayList<>(List\&.of(Couleur\&.values()))\fR [private]\fP"
+
+.SS "List<\fBPirateNom\fP> affichage\&.AffichageTerminal\&.piratesDisponibles = new ArrayList<>(List\&.of(PirateNom\&.values()))\fR [private]\fP"
+
+.SS "Scanner affichage\&.AffichageTerminal\&.scanner = new Scanner(System\&.in)\fR [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for La lÃ©gende Kaizoku: poudre noire et rhum dorÃ© from the source code\&.

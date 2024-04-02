@@ -1,0 +1,162 @@
+.TH "entites.Plateau" 3 "La lÃ©gende Kaizoku: poudre noire et rhum dorÃ©" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+entites.Plateau
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlateau\fP ()"
+.br
+.RI "Constructeur du plateau de jeu\&. "
+.ti -1c
+.RI "\fBCase\fP \fBgetCase\fP (int numero)"
+.br
+.RI "Obtient la case correspondant au numéro spécifié\&. "
+.ti -1c
+.RI "Collection< \fBCase\fP > \fBgetCases\fP ()"
+.br
+.RI "Retourne une collection de toutes les cases sur le plateau\&. "
+.ti -1c
+.RI "int \fBcalculPosition\fP (int nouvellePosition)"
+.br
+.RI "Calcule la position finale sur le plateau en tenant compte des débordements\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBgetNbCases\fP ()"
+.br
+.RI "Retourne le nombre total de cases sur le plateau\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgenererPlateau\fP ()"
+.br
+.RI "Génère les cases du plateau, incluant des cases spéciales aléatoires\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Map< Integer, \fBCase\fP > \fBcases\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBNOMBRE_CASES\fP = 30"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "entites\&.Plateau\&.Plateau ()"
+
+.PP
+Constructeur du plateau de jeu\&. 
+.PP
+.nf
+   Initialise le plateau de jeu avec un nombre prédéfini de cases, en
+   générant aléatoirement les cases spéciales telles que les cases rhum
+   et les cases arme, tout en réservant une case pour la victoire\&.
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "int entites\&.Plateau\&.calculPosition (int nouvellePosition)"
+
+.PP
+Calcule la position finale sur le plateau en tenant compte des débordements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInouvellePosition\fP La position calculée avant ajustement\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La position ajustée en fonction des limites du plateau\&. 
+.PP
+.nf
+    Cette méthode ajuste la position si le calcul initial dépasse le
+    nombre total de cases, permettant ainsi de 'boucler' autour du
+    plateau\&.
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void entites\&.Plateau\&.genererPlateau ()\fR [private]\fP"
+
+.PP
+Génère les cases du plateau, incluant des cases spéciales aléatoires\&. 
+.PP
+.nf
+   Initialise le plateau avec un mélange de cases normales, de cases
+   contenant du rhum, de cases contenant des armes, et termine avec une
+   case de victoire\&. La répartition et le type des cases spéciales sont
+   déterminés aléatoirement\&.
+
+.fi
+.PP
+ 
+.SS "\fBCase\fP entites\&.Plateau\&.getCase (int numero)"
+
+.PP
+Obtient la case correspondant au numéro spécifié\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumero\fP Le numéro de la case à obtenir\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La case au numéro donné ou null si aucune case n'existe à ce numéro\&. 
+.RE
+.PP
+
+.SS "Collection< \fBCase\fP > entites\&.Plateau\&.getCases ()"
+
+.PP
+Retourne une collection de toutes les cases sur le plateau\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une collection contenant toutes les cases du plateau\&. 
+.RE
+.PP
+
+.SS "static int entites\&.Plateau\&.getNbCases ()\fR [static]\fP"
+
+.PP
+Retourne le nombre total de cases sur le plateau\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre total de cases\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Map<Integer, \fBCase\fP> entites\&.Plateau\&.cases\fR [private]\fP"
+
+.SS "final int entites\&.Plateau\&.NOMBRE_CASES = 30\fR [static]\fP, \fR [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for La lÃ©gende Kaizoku: poudre noire et rhum dorÃ© from the source code\&.

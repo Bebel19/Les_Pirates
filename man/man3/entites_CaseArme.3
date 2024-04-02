@@ -1,0 +1,124 @@
+.TH "entites.CaseArme" 3 "La lÃ©gende Kaizoku: poudre noire et rhum dorÃ©" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+entites.CaseArme
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBentites\&.Case\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCaseArme\fP (int \fBnumero\fP, \fBArme\fP \fBarme\fP)"
+.br
+.RI "Constructeur pour créer une case d'arme\&. "
+.ti -1c
+.RI "void \fBappliquerEffet\fP (\fBPirate\fP pirate, \fBJeu\fP jeu)"
+.br
+.RI "Applique l'effet de trouver une arme sur la case au pirate qui y arrive\&. "
+.ti -1c
+.RI "\fBArme\fP \fBgetArme\fP ()"
+.br
+.RI "Obtient l'arme associée à cette case\&. "
+.in -1c
+
+Public Member Functions inherited from \fBentites\&.Case\fP
+.in +1c
+.ti -1c
+.RI "int \fBgetNumero\fP ()"
+.br
+.RI "Obtient le numéro de la case\&. "
+.ti -1c
+.RI "\fBEffet\fP \fBgetEffet\fP ()"
+.br
+.RI "Obtient l'effet associé à la case\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBArme\fP \fBarme\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Member Functions inherited from \fBentites\&.Case\fP
+.in +1c
+.ti -1c
+.RI "\fBCase\fP (int \fBnumero\fP, \fBEffet\fP \fBeffet\fP)"
+.br
+.RI "Constructeur de la classe \fBCase\fP\&. "
+.in -1c
+
+Protected Attributes inherited from \fBentites\&.Case\fP
+.in +1c
+.ti -1c
+.RI "int \fBnumero\fP"
+.br
+.ti -1c
+.RI "\fBEffet\fP \fBeffet\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "entites\&.CaseArme\&.CaseArme (int numero, \fBArme\fP arme)"
+
+.PP
+Constructeur pour créer une case d'arme\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumero\fP Le numéro de la case\&. 
+.br
+\fIarme\fP L'arme présente sur cette case\&. 
+.PP
+.nf
+          Initialise une case avec une arme spécifiée\&. L'effet de cette
+          case est automatiquement défini comme étant Effet\&.ARME\&.
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void entites\&.CaseArme\&.appliquerEffet (\fBPirate\fP pirate, \fBJeu\fP jeu)"
+
+.PP
+Applique l'effet de trouver une arme sur la case au pirate qui y arrive\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate qui arrive sur la case\&. 
+.br
+\fIjeu\fP L'instance du jeu permettant l'accès à l'affichage et à d'autres composantes du jeu\&.
+.RE
+.PP
+Si le pirate n'a pas d'arme ou si l'arme sur la case est plus puissante que celle du pirate, le pirate prend la nouvelle arme\&. Sinon, un message indiquant que le pirate ne prend pas l'arme est affiché\&. 
+.PP
+Reimplemented from \fBentites\&.Case\fP\&.
+.SS "\fBArme\fP entites\&.CaseArme\&.getArme ()"
+
+.PP
+Obtient l'arme associée à cette case\&. 
+.PP
+\fBReturns\fP
+.RS 4
+L'arme présente sur cette case\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBArme\fP entites\&.CaseArme\&.arme\fR [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for La lÃ©gende Kaizoku: poudre noire et rhum dorÃ© from the source code\&.

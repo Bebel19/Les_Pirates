@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['de_0',['De',['../classentites_1_1_de.html',1,'entites.De'],['../classentites_1_1_de.html#a7c2599638a75758ff96b2113d01cf896',1,'entites.De.De()']]],
-  ['demandernombrejoueurs_1',['demanderNombreJoueurs',['../classaffichage_1_1_affichage_java_f_x.html#a87d536203b2693cd4911f57964a9bb27',1,'affichage.AffichageJavaFX.demanderNombreJoueurs()'],['../classaffichage_1_1_affichage_terminal.html#a070c994ccbd1baed51a459482031383e',1,'affichage.AffichageTerminal.demanderNombreJoueurs()'],['../interfaceaffichage_1_1_i_affichage.html#ad9a645ffc02310f35fa35deae76037c9',1,'affichage.IAffichage.demanderNombreJoueurs()']]],
-  ['deplacerpirate_2',['deplacerPirate',['../classentites_1_1_jeu.html#a71ababa2ba36c0bac5dcf411d67f1cf4',1,'entites::Jeu']]],
-  ['description_3',['Description',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
+  ['calculernouvelleposition_0',['calculerNouvellePosition',['../classentites_1_1_jeu.html#aa81e57c7ac69b31f0870595cc2ac0621',1,'entites::Jeu']]],
+  ['calculposition_1',['calculPosition',['../classentites_1_1_plateau.html#a41f041b43731960d99b48390ac3b97ba',1,'entites::Plateau']]],
+  ['case_2',['Case',['../class_case.html',1,'Case'],['../classentites_1_1_case.html',1,'entites.Case'],['../classentites_1_1_case.html#a23c9a8d5fe4d556b4d1242d6fa4ff9c4',1,'entites.Case.Case()']]],
+  ['case_2ejava_3',['Case.java',['../_case_8java.html',1,'']]],
+  ['casearme_4',['CaseArme',['../class_case_arme.html',1,'CaseArme'],['../classentites_1_1_case_arme.html',1,'entites.CaseArme'],['../classentites_1_1_case_arme.html#af737d48e6d4b049b3afa98cb34eb63bc',1,'entites.CaseArme.CaseArme()']]],
+  ['casearme_2ejava_5',['CaseArme.java',['../_case_arme_8java.html',1,'']]],
+  ['caserhum_6',['CaseRhum',['../class_case_rhum.html',1,'CaseRhum'],['../classentites_1_1_case_rhum.html',1,'entites.CaseRhum'],['../classentites_1_1_case_rhum.html#a24980775d31bde3ff7f990bcfd64533e',1,'entites.CaseRhum.CaseRhum()']]],
+  ['caserhum_2ejava_7',['CaseRhum.java',['../_case_rhum_8java.html',1,'']]],
+  ['cases_8',['cases',['../classentites_1_1_plateau.html#a9d34b47d82faf842ac93fa88b0e1cd43',1,'entites::Plateau']]],
+  ['casewin_9',['CaseWin',['../class_case_win.html',1,'CaseWin'],['../classentites_1_1_case_win.html',1,'entites.CaseWin'],['../classentites_1_1_case_win.html#a478d9993ce36538574cbfc5fb5e1b681',1,'entites.CaseWin.CaseWin()']]],
+  ['casewin_2ejava_10',['CaseWin.java',['../_case_win_8java.html',1,'']]],
+  ['choisircouleur_11',['choisirCouleur',['../classaffichage_1_1_affichage_java_f_x.html#a3205bfe5c62fab64a1bf222ab6325c45',1,'affichage.AffichageJavaFX.choisirCouleur()'],['../classaffichage_1_1_affichage_terminal.html#ab4ec0d77fc3c0798dde4826e03415938',1,'affichage.AffichageTerminal.choisirCouleur()'],['../interfaceaffichage_1_1_i_affichage.html#a9605c6d23508d8f56c7cc3bed0740f95',1,'affichage.IAffichage.choisirCouleur()']]],
+  ['choisirjoueursetpirates_12',['choisirJoueursEtPirates',['../classentites_1_1_jeu.html#afcf8e5afc4986be4b16be3cf3422ed2f',1,'entites::Jeu']]],
+  ['choisirpirate_13',['choisirPirate',['../classaffichage_1_1_affichage_java_f_x.html#ac0eaae948c9d669ddf51f1eef07fe31c',1,'affichage.AffichageJavaFX.choisirPirate()'],['../classaffichage_1_1_affichage_terminal.html#ae9111f85713c8bd6ef9f243138801970',1,'affichage.AffichageTerminal.choisirPirate()'],['../interfaceaffichage_1_1_i_affichage.html#aeb092ca39110deee657e02dc696ccb2e',1,'affichage.IAffichage.choisirPirate()']]],
+  ['chopper_14',['CHOPPER',['../enumutils_1_1_pirate_nom.html#aa11f59b2ec3abf1294d5d06f976451f4',1,'utils::PirateNom']]],
+  ['code_15',['code',['../enumutils_1_1_couleur.html#a733fbe036143434030bfca2aed6a513c',1,'utils::Couleur']]],
+  ['couleur_16',['Couleur',['../enumutils_1_1_couleur.html',1,'utils']]],
+  ['couleur_17',['couleur',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a33f87b00a462a82b4ddec759cf6b96f6',1,'affichage.AffichageJavaFX.CouleurOption.couleur'],['../classentites_1_1_pirate.html#a192f11d82dba20ee584d470c708de282',1,'entites.Pirate.couleur']]],
+  ['couleur_18',['Couleur',['../enumutils_1_1_couleur.html#a4c0a9d098f435b417fb10a81fd3eb237',1,'utils::Couleur']]],
+  ['couleur_2ejava_19',['Couleur.java',['../_couleur_8java.html',1,'']]],
+  ['couleuroption_20',['CouleurOption',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html',1,'affichage.AffichageJavaFX.CouleurOption'],['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a08deac6485cbd8e6c976170c16b1df8a',1,'affichage.AffichageJavaFX.CouleurOption.CouleurOption()']]],
+  ['couleursdejachoisies_21',['couleursDejaChoisies',['../classaffichage_1_1_affichage_java_f_x.html#afaa3c58569729859baa43c279d30d381',1,'affichage::AffichageJavaFX']]],
+  ['couleursdisponibles_22',['couleursDisponibles',['../classaffichage_1_1_affichage_terminal.html#a9e624ea428d02304551db4a0fcac9980',1,'affichage::AffichageTerminal']]]
 ];

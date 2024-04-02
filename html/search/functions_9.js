@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setarme_0',['setArme',['../classentites_1_1_pirate.html#aea33d544e67fb4153ffc7f43efc82d09',1,'entites::Pirate']]],
-  ['setposition_1',['setPosition',['../classentites_1_1_pirate.html#a9f311c9fae3f92794b61a5f736e48f1a',1,'entites::Pirate']]],
-  ['start_2',['start',['../classentites_1_1_jeu.html#a03474c0cf923ca7ba6725086cf9dacd9',1,'entites::Jeu']]]
+  ['perdrepv_0',['perdrePv',['../classentites_1_1_pirate.html#af61886875ff0428b3d9f9e64f257d622',1,'entites::Pirate']]],
+  ['pirate_1',['Pirate',['../classentites_1_1_pirate.html#a087aab9ec3410aff56bb73c926c091c1',1,'entites::Pirate']]],
+  ['plateau_2',['Plateau',['../classentites_1_1_plateau.html#a62d1038b6c965aafa5e6c82b04392b27',1,'entites::Plateau']]]
 ];

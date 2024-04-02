@@ -1,0 +1,142 @@
+.TH "utils.Arme" 3 "La lÃ©gende Kaizoku: poudre noire et rhum dorÃ©" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utils.Arme
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArme\fP (String \fBnom\fP, int \fBforce\fP)"
+.br
+.RI "Constructeur privé pour définir une arme\&. "
+.ti -1c
+.RI "String \fBgetNom\fP ()"
+.br
+.RI "Retourne le nom de l'arme\&. "
+.ti -1c
+.RI "int \fBgetForce\fP ()"
+.br
+.RI "Retourne la force de l'arme\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBArme\fP \fBobtenirArmeAleatoire\fP ()"
+.br
+.RI "Sélectionne une arme aléatoire parmi les armes disponibles, à l'exception du poing\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPOING\fP =('Poing', 1)"
+.br
+.ti -1c
+.RI "\fBSABRE\fP =('Sabre', 3)"
+.br
+.ti -1c
+.RI "\fBPISTOLET\fP =('Pistolet', 5)"
+.br
+.ti -1c
+.RI "\fBMOUSQUET\fP =('Mousquet', 7)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final String \fBnom\fP"
+.br
+.ti -1c
+.RI "final int \fBforce\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final Random \fBrandom\fP = new Random()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "utils\&.Arme\&.Arme (String nom, int force)"
+
+.PP
+Constructeur privé pour définir une arme\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInom\fP Le nom de l'arme\&. 
+.br
+\fIforce\fP La force de l'arme, influençant les duels entre pirates\&. 
+.PP
+.nf
+         Initialise une nouvelle arme avec le nom et la force spécifiés\&.
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int utils\&.Arme\&.getForce ()"
+
+.PP
+Retourne la force de l'arme\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La force de l'arme\&. 
+.RE
+.PP
+
+.SS "String utils\&.Arme\&.getNom ()"
+
+.PP
+Retourne le nom de l'arme\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nom de l'arme\&. 
+.RE
+.PP
+
+.SS "static \fBArme\fP utils\&.Arme\&.obtenirArmeAleatoire ()\fR [static]\fP"
+
+.PP
+Sélectionne une arme aléatoire parmi les armes disponibles, à l'exception du poing\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une arme aléatoirement choisie parmi celles définies, excepté le poing\&.
+.RE
+.PP
+Cette méthode est utile pour attribuer une arme aléatoire à un pirate ou à une case arme sur le plateau\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "final int utils\&.Arme\&.force\fR [private]\fP"
+
+.SS "utils\&.Arme\&.MOUSQUET =('Mousquet', 7)"
+
+.SS "final String utils\&.Arme\&.nom\fR [private]\fP"
+
+.SS "utils\&.Arme\&.PISTOLET =('Pistolet', 5)"
+
+.SS "utils\&.Arme\&.POING =('Poing', 1)"
+
+.SS " final Random utils\&.Arme\&.random = new Random()\fR [static]\fP, \fR [private]\fP"
+
+.SS "utils\&.Arme\&.SABRE =('Sabre', 3)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for La lÃ©gende Kaizoku: poudre noire et rhum dorÃ© from the source code\&.

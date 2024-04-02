@@ -1,0 +1,211 @@
+.TH "affichage.IAffichage" 3 "La lÃ©gende Kaizoku: poudre noire et rhum dorÃ©" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+affichage.IAffichage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBafficherPlateau\fP (\fBPlateau\fP plateau)"
+.br
+.RI "Affiche le plateau de jeu\&. "
+.ti -1c
+.RI "void \fBafficherMessage\fP (String message)"
+.br
+.RI "Affiche un message à l'utilisateur\&. "
+.ti -1c
+.RI "void \fBafficherPosition\fP (int positionAfficher, \fBCase\fP caseCourante)"
+.br
+.RI "Affiche la position actuelle d'une case et son contenu\&. "
+.ti -1c
+.RI "void \fBafficherGagnant\fP (\fBPirate\fP pirate)"
+.br
+.RI "Affiche le gagnant du jeu\&. "
+.ti -1c
+.RI "void \fBafficherDebutTour\fP (\fBPirate\fP pirate)"
+.br
+.RI "Affiche le début du tour d'un pirate\&. "
+.ti -1c
+.RI "void \fBafficherFinTour\fP (\fBPirate\fP pirate)"
+.br
+.RI "Affiche la fin du tour d'un pirate\&. "
+.ti -1c
+.RI "void \fBafficherIvresse\fP (int valRecul)"
+.br
+.RI "Affiche un avertissement quand un pirate subit l'effet d'ivresse\&. "
+.ti -1c
+.RI "void \fBafficherChangementArme\fP (\fBPirate\fP pirate, \fBArme\fP nouvelleArme)"
+.br
+.RI "Affiche un changement d'arme pour un pirate\&. "
+.ti -1c
+.RI "int \fBdemanderNombreJoueurs\fP ()"
+.br
+.RI "Demande le nombre de joueurs participant au jeu\&. "
+.ti -1c
+.RI "\fBPirateNom\fP \fBchoisirPirate\fP ()"
+.br
+.RI "Permet à l'utilisateur de choisir un nom de pirate parmi les options disponibles\&. "
+.ti -1c
+.RI "\fBCouleur\fP \fBchoisirCouleur\fP ()"
+.br
+.RI "Permet à l'utilisateur de choisir une couleur parmi les options disponibles\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void affichage\&.IAffichage\&.afficherChangementArme (\fBPirate\fP pirate, \fBArme\fP nouvelleArme)"
+
+.PP
+Affiche un changement d'arme pour un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate qui change d'arme\&. 
+.br
+\fInouvelleArme\fP La nouvelle arme obtenue par le pirate\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherDebutTour (\fBPirate\fP pirate)"
+
+.PP
+Affiche le début du tour d'un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate dont le tour commence\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherFinTour (\fBPirate\fP pirate)"
+
+.PP
+Affiche la fin du tour d'un pirate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate dont le tour se termine\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherGagnant (\fBPirate\fP pirate)"
+
+.PP
+Affiche le gagnant du jeu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpirate\fP Le pirate qui a gagné le jeu\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageTerminal\fP, and \fBaffichage\&.AffichageJavaFX\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherIvresse (int valRecul)"
+
+.PP
+Affiche un avertissement quand un pirate subit l'effet d'ivresse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalRecul\fP Le nombre de cases que le pirate recule à cause de l'ivresse\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherMessage (String message)"
+
+.PP
+Affiche un message à l'utilisateur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP Le message à afficher\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherPlateau (\fBPlateau\fP plateau)"
+
+.PP
+Affiche le plateau de jeu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplateau\fP L'objet \fBPlateau\fP représentant l'état actuel du jeu à afficher\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "void affichage\&.IAffichage\&.afficherPosition (int positionAfficher, \fBCase\fP caseCourante)"
+
+.PP
+Affiche la position actuelle d'une case et son contenu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpositionAfficher\fP Le numéro de la case à afficher\&. 
+.br
+\fIcaseCourante\fP La case à afficher\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "\fBCouleur\fP affichage\&.IAffichage\&.choisirCouleur ()"
+
+.PP
+Permet à l'utilisateur de choisir une couleur parmi les options disponibles\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La couleur choisie\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "\fBPirateNom\fP affichage\&.IAffichage\&.choisirPirate ()"
+
+.PP
+Permet à l'utilisateur de choisir un nom de pirate parmi les options disponibles\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nom du pirate choisi\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+.SS "int affichage\&.IAffichage\&.demanderNombreJoueurs ()"
+
+.PP
+Demande le nombre de joueurs participant au jeu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de joueurs entré par l'utilisateur\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBaffichage\&.AffichageJavaFX\fP, and \fBaffichage\&.AffichageTerminal\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for La lÃ©gende Kaizoku: poudre noire et rhum dorÃ© from the source code\&.
