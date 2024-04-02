@@ -1,3 +1,6 @@
+\mainpage La Légende Kaizoku Documentation
+
+Bienvenue dans la documentation de La Légende Kaizoku: poudre noire et rhum doré.
 # Les Pirates
 
 ## Description
