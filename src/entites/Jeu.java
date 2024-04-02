@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import affichage.AffichageTerminal;
+
 import affichage.IAffichage;
 import utils.PirateNom;
 import utils.Couleur;

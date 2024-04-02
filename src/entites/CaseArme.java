@@ -1,6 +1,6 @@
 package entites;
 
-import affichage.AffichageTerminal;
+
 import utils.Arme;
 import utils.Effet;
 
