@@ -21,11 +21,11 @@ public interface IAffichage {
 	void afficherMessage(String message);
 
 	/**
-	 * @brief Affiche la position actuelle d'une case et son contenu.
-	 * @param positionAfficher Le numéro de la case à afficher.
+	 * @brief Affiche la position actuelle d'un pirate et le contenu de la case.
+	 * @param pirate concerné.
 	 * @param caseCourante La case à afficher.
 	 */
-	void afficherPosition(int positionAfficher, Case caseCourante);
+	void afficherPosition(Pirate pirate, Case caseCourante);
 
 	/**
 	 * @brief Affiche le gagnant du jeu.
@@ -77,5 +77,9 @@ public interface IAffichage {
 	Couleur choisirCouleur();
 
 	void afficherPirates(Pirate[] pirates);
+
+	void affichageDe(Pirate pirate, int lance);
+
+
 
 }

@@ -31,9 +31,9 @@ public class JeuTest {
             }
 
             @Override
-            public void afficherPosition(int positionAfficher, Case caseCourante) {
+            public void afficherPosition(Pirate pirate, Case caseCourante) {
                 // Afficher la position pour le test
-                System.out.println("Position affichée : " + positionAfficher);
+                System.out.println("Position affichée : " + pirate.getPosition());
             }
 
 			@Override
@@ -86,6 +86,12 @@ public class JeuTest {
 
 			@Override
 			public void afficherPirates(Pirate[] pirates) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void affichageDe(Pirate pirate, int lance) {
 				// TODO Auto-generated method stub
 				
 			}
@@ -116,7 +122,7 @@ public class JeuTest {
             }
 
             @Override
-            public void afficherPosition(int positionAfficher, Case caseCourante) {
+            public void afficherPosition(Pirate pirate, Case caseCourante) {
                 // Ne rien faire dans ce test
             }
 
@@ -170,6 +176,12 @@ public class JeuTest {
 
 			@Override
 			public void afficherPirates(Pirate[] pirates) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void affichageDe(Pirate pirate, int lance) {
 				// TODO Auto-generated method stub
 				
 			}
@@ -198,9 +210,9 @@ public class JeuTest {
             }
 
             @Override
-            public void afficherPosition(int positionAfficher, Case caseCourante) {
+            public void afficherPosition(Pirate pirate, Case caseCourante) {
                 // Afficher la position pour le test
-                System.out.println("Position affichée : " + positionAfficher);
+                System.out.println("Position affichée : " + pirate.getPosition());
             }
 
 			@Override
@@ -253,6 +265,12 @@ public class JeuTest {
 
 			@Override
 			public void afficherPirates(Pirate[] pirates) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void affichageDe(Pirate pirate, int lance) {
 				// TODO Auto-generated method stub
 				
 			}

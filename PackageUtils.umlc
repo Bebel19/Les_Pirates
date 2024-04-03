@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<umlmark-class version="0.8.1" icons="true" image-type="JPEG" show-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-rel="true" router="FAN">  
+  <enumeration id="1" language="java" name="utils.Arme" project="Les_Pirates" file="/Les_Pirates/src/utils/Arme.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="119" x="298" y="161"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="2" language="java" name="utils.Effet" project="Les_Pirates" file="/Les_Pirates/src/utils/Effet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="119" x="457" y="161"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="3" language="java" name="utils.Couleur" project="Les_Pirates" 
+    file="/Les_Pirates/src/utils/Couleur.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="130" x="616" y="161"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="4" language="java" name="utils.PirateNom" project="Les_Pirates" 
+    file="/Les_Pirates/src/utils/PirateNom.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="119" x="786" y="161"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </enumeration>  
+  <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
+    sort="true" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="false"/>    
+    <operations public="true" package="true" protected="true" private="true" static="false"/>  
+  </classifier-attribute>  
+  <association-attribute labels="true" multiplicity="true"/>
+</umlmark-class>

@@ -18,9 +18,9 @@ public class TestDeplacements {
 		for (int i = 0; i < 60; i++) {
             int lance = de.lancerDe();
             System.out.println("Lancer du dé : " + lance);
-			aff.afficherPosition(franky.getPosition(), null);
+			aff.afficherPosition(franky, null);
 			jeu.deplacerPirate(franky, lance);
-			aff.afficherPosition(franky.getPosition(), null);
+			aff.afficherPosition(franky, null);
 		}
 
 	}

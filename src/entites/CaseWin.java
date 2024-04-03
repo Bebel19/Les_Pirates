@@ -35,6 +35,7 @@ public class CaseWin extends Case {
 
 	@Override
 	public void appliquerEffet(Pirate pirate, Jeu jeu) {
-		jeu.terminerJeu(pirate);
+		jeu.setPirateGagnant(pirate);
+		jeu.setJeuTermine(true);
 	}
 }

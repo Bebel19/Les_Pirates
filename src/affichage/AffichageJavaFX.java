@@ -161,7 +161,7 @@ public class AffichageJavaFX implements IAffichage {
 	}
 
 	@Override
-	public void afficherPosition(int positionAfficher, Case caseCourante) {
+	public void afficherPosition(Pirate pirate, Case caseCourante) {
 		// TODO Auto-generated method stub
 
 	}
@@ -330,6 +330,12 @@ public class AffichageJavaFX implements IAffichage {
 	public void afficherChangementArme(Pirate pirate, Arme nouvelleArme) {
 	    afficherPopup("Le pirate trouve une arme",pirate.getNom() + " trouve " + nouvelleArme.getNom() + " avec une force de "
 	            + nouvelleArme.getForce() + " et décide de la prendre.");
+	}
+
+	@Override
+	public void affichageDe(Pirate pirate, int lance) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

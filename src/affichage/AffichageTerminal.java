@@ -213,8 +213,8 @@ public class AffichageTerminal implements IAffichage {
 	}
 
 	@Override
-	public void afficherPosition(int positionAfficher, Case caseCourante) {
-		System.out.println("Numéro case : " + positionAfficher);
+	public void afficherPosition(Pirate pirate, Case caseCourante) {
+		System.out.println(pirate.getNom() + " est à la case " + pirate.getPosition());
 		// Vérifie le type de la case
 		if (caseCourante instanceof CaseArme) {
 			CaseArme caseArme = (CaseArme) caseCourante;
@@ -238,6 +238,12 @@ public class AffichageTerminal implements IAffichage {
 	@Override
 	public void afficherPirates(Pirate[] pirates) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void affichageDe(Pirate pirate, int lance) {
+		afficherMessage("Le pirate " + pirate.getNom() + " à lancé le dé il obtient un " + lance + ".");
 		
 	}
 	

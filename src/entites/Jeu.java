@@ -9,28 +9,28 @@
 package entites;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 
 import affichage.IAffichage;
 import utils.PirateNom;
 import utils.Couleur;
 
 public class Jeu {
-	private int nbJoueurs =2;
+	private int nbJoueurs = 2;
 	private Pirate[] listePirates;
 	private Plateau plateau = new Plateau();
 	private De de;
 	private IAffichage affichage;
 	private boolean jeuTermine = false;
 	private Pirate pirateGagnant = null;
+
 	/**
 	 * @brief Constructeur du jeu avec affichage spécifié.
-	 * @param affichage L'interface d'affichage utilisée pour interagir avec l'utilisateur.
+	 * @param affichage L'interface d'affichage utilisée pour interagir avec
+	 *                  l'utilisateur.
 	 *
-	 * Initialise le jeu avec un dé, et l'interface d'affichage fournie.
+	 *                  Initialise le jeu avec un dé, et l'interface d'affichage
+	 *                  fournie.
 	 */
 	public Jeu(IAffichage affichage) {
 
@@ -40,46 +40,58 @@ public class Jeu {
 	}
 
 	/**
-	 * @brief Commence et exécute le cycle de jeu jusqu'à ce qu'un gagnant soit déterminé.
+	 * @brief Commence et exécute le cycle de jeu jusqu'à ce qu'un gagnant soit
+	 *        déterminé.
 	 *
-	 * Cette méthode gère la séquence complète du jeu, incluant le choix des joueurs et des pirates,
-	 * les déplacements sur le plateau, les duels, et la vérification des conditions de victoire.
+	 *        Cette méthode gère la séquence complète du jeu, incluant le choix des
+	 *        joueurs et des pirates, les déplacements sur le plateau, les duels, et
+	 *        la vérification des conditions de victoire.
 	 */
 	public void start() {
 		choisirJoueursEtPirates();
 		while (!jeuTermine) {
-			Set<Pirate> piratesAyantCombattu = new HashSet<>();
 			for (Pirate pirate : listePirates) {
-				if (jeuTermine) {
-					break;
-				}
-				if (!piratesAyantCombattu.contains(pirate)) {
+				verifierDernierPirateRestant();
+				if (!jeuTermine) {
 					affichage.afficherDebutTour(pirate); // Afficher le début du tour
-					int lance = de.lancerDe();
-					deplacerPirate(pirate, lance);
-					for (Pirate autrePirate : listePirates) {
-						if (autrePirate != pirate && !piratesAyantCombattu.contains(autrePirate)
-								&& Math.abs(autrePirate.getPosition() - pirate.getPosition()) <= 2) {
-							if (engagerDuel(pirate, autrePirate) && !jeuTermine) {
-								piratesAyantCombattu.add(pirate);
-								piratesAyantCombattu.add(autrePirate);
-								break;
-							}
-						}
-					}
+					tourPirate(pirate);
 					affichage.afficherFinTour(pirate); // Afficher la fin du tour
-					verifierTresorTrouve(pirate); // Vérifier si le pirate a trouvé le trésor
 					verifierDernierPirateRestant(); // Vérifier s'il ne reste qu'un seul pirate en jeu
 				}
 			}
 		}
+		affichage.afficherGagnant(pirateGagnant);
 	}
+
+	public void tourPirate(Pirate pirate) {
+		if (!jeuTermine) {
+			int lance = de.lancerDe();
+			affichage.affichageDe(pirate, lance);
+			deplacerPirate(pirate, lance);
+			duel(pirate);
+
+		}
+	}
+
+	private void duel(Pirate pirate) {
+		for (Pirate autrePirate : listePirates) {
+			if (!jeuTermine && autrePirate != pirate && Math.abs(autrePirate.getPosition() - pirate.getPosition()) <= 2
+					&& engagerDuel(pirate, autrePirate)) {
+
+				break;
+			}
+
+		}
+
+	}
+
 	/**
-	 * @brief Détermine si un pirate a trouvé le trésor et termine le jeu si c'est le cas.
+	 * @brief Détermine si un pirate a trouvé le trésor et termine le jeu si c'est
+	 *        le cas.
 	 * @param pirate Le pirate à vérifier.
 	 *
-	 * Si le pirate a atteint ou dépassé la dernière case du plateau, le jeu est terminé,
-	 * et ce pirate est déclaré gagnant.
+	 *               Si le pirate a atteint ou dépassé la dernière case du plateau,
+	 *               le jeu est terminé, et ce pirate est déclaré gagnant.
 	 */
 	public void verifierTresorTrouve(Pirate pirate) {
 		if (pirate.getPosition() >= Plateau.getNbCases()) {
@@ -90,81 +102,76 @@ public class Jeu {
 	}
 
 	public void verifierDernierPirateRestant() {
-	    int piratesRestants = 0;
-	    for (Pirate p : listePirates) {
-	        if (p.getPosition() < Plateau.getNbCases()) {
-	            piratesRestants++;
-	        }
-	    }
-	    if (piratesRestants == 1) {
-	        // Trouver le seul pirate restant en jeu
-	        for (Pirate p : listePirates) {
-	            if (p.getPosition() >= Plateau.getNbCases()) {
-	            	pirateGagnant = p;
-	                affichage.afficherMessage(
-	                        "Félicitations ! " + p.getNom() + ", le dernier pirate en jeu, remporte la partie !");
-	                jeuTermine = true;
-	                break;
-	            }
-	        }
-	    }
+		int piratesRestants = 0;
+		for (Pirate p : listePirates) {
+			if (p.getPosition() < Plateau.getNbCases()) {
+				piratesRestants++;
+			}
+		}
+		if (piratesRestants == 1) {
+			// Trouver le seul pirate restant en jeu
+			for (Pirate p : listePirates) {
+				if (p.getPosition() >= Plateau.getNbCases()) {
+					pirateGagnant = p;
+					jeuTermine = true;
+					break;
+				}
+			}
+		}
 	}
-
 
 	public Pirate[] getPirates() {
 		return listePirates;
 	}
+
 	/**
-	 * @brief Déplace un pirate sur le plateau en fonction du résultat d'un lancer de dé.
-	 * @param pirate Le pirate à déplacer.
+	 * @brief Déplace un pirate sur le plateau en fonction du résultat d'un lancer
+	 *        de dé.
+	 * @param pirate   Le pirate à déplacer.
 	 * @param valeurDe Le nombre de cases à déplacer le pirate.
 	 *
-	 * Calcule la nouvelle position du pirate sur le plateau, applique les effets de la case atteinte,
-	 * et vérifie les conditions de fin de jeu.
+	 *                 Calcule la nouvelle position du pirate sur le plateau,
+	 *                 applique les effets de la case atteinte, et vérifie les
+	 *                 conditions de fin de jeu.
 	 */
 	public void deplacerPirate(Pirate pirate, int valeurDe) {
-	    if (jeuTermine) {
-	        return;
-	    }
+		if (jeuTermine) {
+			return;
+		}
 
-	    int nouvellePosition = calculerNouvellePosition(pirate.getPosition(), valeurDe);
-	    pirate.setPosition(nouvellePosition);
+		int nouvellePosition = calculerNouvellePosition(pirate.getPosition(), valeurDe);
+		pirate.setPosition(nouvellePosition);
 
-	    Case caseCourante = plateau.getCase(nouvellePosition);
-	    affichage.afficherPosition(nouvellePosition, caseCourante);
+		Case caseCourante = plateau.getCase(pirate.getPosition());
+		affichage.afficherPosition(pirate, caseCourante);
 
-	    if (caseCourante != null) {
-	        caseCourante.appliquerEffet(pirate, this);
-	        if (jeuTermine) {
-	            return;// Ne doit pas étre retiré car le jeu peut se terminer si le joueur est sur une caseWIN 
-	        }
-	    }
+		if (caseCourante != null) {
+			caseCourante.appliquerEffet(pirate, this);
+		}
 	}
 
-	
 	private int calculerNouvellePosition(int positionActuelle, int deplacement) {
-	    int nouvellePosition = positionActuelle + deplacement;
-	    int nbCases = Plateau.getNbCases();
+		int nouvellePosition = positionActuelle + deplacement;
+		int nbCases = Plateau.getNbCases();
 
-	    if (nouvellePosition > nbCases) {
-	        nouvellePosition -= nbCases;
-	    } else if (nouvellePosition < 1) {
-	        nouvellePosition += nbCases;
-	    }
-	    return nouvellePosition;
+		if (nouvellePosition > nbCases) {
+			nouvellePosition -= nbCases;
+		} else if (nouvellePosition < 1) {
+			nouvellePosition += nbCases;
+		}
+		return nouvellePosition;
 	}
-
 
 	public void terminerJeu(Pirate pirate) {
 		pirateGagnant = pirate;
 		affichage.afficherGagnant(pirate);
-		jeuTermine = true;
 	}
+
 	/**
 	 * @brief Génère les joueurs et assigne des pirates et des couleurs.
 	 *
-	 * Demande à l'utilisateur de choisir des noms de pirates et des couleurs pour chaque joueur,
-	 * initialisant ainsi les joueurs du jeu.
+	 *        Demande à l'utilisateur de choisir des noms de pirates et des couleurs
+	 *        pour chaque joueur, initialisant ainsi les joueurs du jeu.
 	 */
 	public void choisirJoueursEtPirates() {
 		int nombreJoueurs = this.affichage.demanderNombreJoueurs();
@@ -178,14 +185,16 @@ public class Jeu {
 			listePirates[i] = pirate;
 		}
 	}
+
 	/**
-	 * @brief Engage un duel entre deux pirates lorsqu'ils se rencontrent sur le plateau.
+	 * @brief Engage un duel entre deux pirates lorsqu'ils se rencontrent sur le
+	 *        plateau.
 	 * @param pirate1 Le premier pirate.
 	 * @param pirate2 Le second pirate.
 	 * @return Un booléen indiquant si un duel a eu lieu.
 	 *
-	 * Compare la force des armes des pirates et détermine le vainqueur du duel.
-	 * Le pirate perdant subit une perte de points de vie.
+	 *         Compare la force des armes des pirates et détermine le vainqueur du
+	 *         duel. Le pirate perdant subit une perte de points de vie.
 	 */
 	public boolean engagerDuel(Pirate pirate1, Pirate pirate2) {
 
@@ -223,20 +232,22 @@ public class Jeu {
 		for (Pirate pirate : listePirates) {
 			if (!pirate.estMort()) {
 				piratesVivants.add(pirate);
-			} 
+			}
 		}
 
 		// Convertir la liste des pirates vivants en un nouveau tableau et le réaffecter
 		// à listePirates
 		listePirates = piratesVivants.toArray(new Pirate[0]);
 	}
-	
+
 	public boolean getJeuTermine() {
 		return jeuTermine;
 	}
+
 	public void setJeuTermine(boolean jeuTermine) {
 		this.jeuTermine = jeuTermine;
 	}
+
 	public IAffichage getAffichage() {
 		return affichage;
 	}
@@ -253,6 +264,11 @@ public class Jeu {
 	public Pirate getPirateGagnant() {
 		// TODO Auto-generated method stub
 		return pirateGagnant;
+	}
+
+	public void setPirateGagnant(Pirate pirate) {
+		pirateGagnant = pirate;
+
 	}
 
 }
