@@ -19,25 +19,40 @@
 - Java 11 ou version supérieure.
 - JavaFX SDK 11 ou version supérieure.
 
-## Installation
+## Documentation Technique
 
-1. Clonez ce dépôt sur votre machine locale en utilisant `git clone https://github.com/Bebel19/Les_Pirates.git`.
-2. Assurez-vous que JavaFX est correctement configuré dans votre environnement de développement.
-3. Lancez l'application via votre IDE ou en ligne de commande :
+Une documentation technique détaillée a été générée avec Doxygen, offrant une vue approfondie de la structure interne du jeu, des classes, des méthodes et de l'architecture globale. Cette documentation est destinée aux développeurs souhaitant contribuer au projet ou comprendre son fonctionnement en détail.
+
+### Accéder à la Documentation
+
+La documentation Doxygen est disponible au format HTML et peut être consultée en ouvrant le fichier `index.html` situé dans le dossier `/HTML` avec votre navigateur web préféré.
+
+### Générer la Documentation
+
+Si vous souhaitez générer la dernière version de la documentation à partir du code source :
+
+1. Assurez-vous que Doxygen est installé sur votre machine. Pour l'installer, visitez [le site officiel de Doxygen](http://www.doxygen.nl/).
+
+2. Naviguez vers le dossier racine du projet et exécutez la commande suivante (assurez-vous que le fichier de configuration `Doxyfile` est présent) :
+
+    ```shell
+    doxygen Doxyfile
+    ```
+
+    Cette commande générera la documentation dans le dossier spécifié dans votre `Doxyfile`, typiquement `/docs` ou `/doc`.
+
+
+## Installation et Exécution
+
+Clonez le dépôt :
 
 ```shell
-javac --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -d bin src/**/*.java
+git clone https://github.com/Bebel19/Les_Pirates.git
+cd Les_Pirates
 
-```
+## Pour la version javaFX (beta) :
+java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStartJavaFX
 
-```shell
-## Pour la version terminal dans la branche main
-
+## Pour la version console (terminal) : 
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStart
-```
-
-```shell
-## Pour la version javaFX (beta) dans la branche Les_Pirates_JavaFX
-
-java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.MonJeu
 ```
