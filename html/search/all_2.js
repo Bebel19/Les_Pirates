@@ -16,11 +16,15 @@ var searchData=
   ['choisirpirate_13',['choisirPirate',['../classaffichage_1_1_affichage_java_f_x.html#ac0eaae948c9d669ddf51f1eef07fe31c',1,'affichage.AffichageJavaFX.choisirPirate()'],['../classaffichage_1_1_affichage_terminal.html#ae9111f85713c8bd6ef9f243138801970',1,'affichage.AffichageTerminal.choisirPirate()'],['../interfaceaffichage_1_1_i_affichage.html#aeb092ca39110deee657e02dc696ccb2e',1,'affichage.IAffichage.choisirPirate()']]],
   ['chopper_14',['CHOPPER',['../enumutils_1_1_pirate_nom.html#aa11f59b2ec3abf1294d5d06f976451f4',1,'utils::PirateNom']]],
   ['code_15',['code',['../enumutils_1_1_couleur.html#a733fbe036143434030bfca2aed6a513c',1,'utils::Couleur']]],
-  ['couleur_16',['Couleur',['../enumutils_1_1_couleur.html',1,'utils']]],
-  ['couleur_17',['couleur',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a33f87b00a462a82b4ddec759cf6b96f6',1,'affichage.AffichageJavaFX.CouleurOption.couleur'],['../classentites_1_1_pirate.html#a192f11d82dba20ee584d470c708de282',1,'entites.Pirate.couleur']]],
-  ['couleur_18',['Couleur',['../enumutils_1_1_couleur.html#a4c0a9d098f435b417fb10a81fd3eb237',1,'utils::Couleur']]],
-  ['couleur_2ejava_19',['Couleur.java',['../_couleur_8java.html',1,'']]],
-  ['couleuroption_20',['CouleurOption',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html',1,'affichage.AffichageJavaFX.CouleurOption'],['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a08deac6485cbd8e6c976170c16b1df8a',1,'affichage.AffichageJavaFX.CouleurOption.CouleurOption()']]],
-  ['couleursdejachoisies_21',['couleursDejaChoisies',['../classaffichage_1_1_affichage_java_f_x.html#afaa3c58569729859baa43c279d30d381',1,'affichage::AffichageJavaFX']]],
-  ['couleursdisponibles_22',['couleursDisponibles',['../classaffichage_1_1_affichage_terminal.html#a9e624ea428d02304551db4a0fcac9980',1,'affichage::AffichageTerminal']]]
+  ['controleurjavafx_16',['ControleurJavaFX',['../classcontroleurs_1_1_controleur_java_f_x.html',1,'controleurs.ControleurJavaFX'],['../classcontroleurs_1_1_controleur_java_f_x.html#abbac5ff3a27481491e1689544ab7aa3d',1,'controleurs.ControleurJavaFX.ControleurJavaFX()']]],
+  ['controleurjavafx_2ejava_17',['ControleurJavaFX.java',['../_controleur_java_f_x_8java.html',1,'']]],
+  ['controleurs_18',['controleurs',['../namespacecontroleurs.html',1,'']]],
+  ['convertionposition_19',['convertionPosition',['../classaffichage_1_1_affichage_java_f_x.html#a8030c0aa6f4ace7891c8bd31c42496a9',1,'affichage::AffichageJavaFX']]],
+  ['couleur_20',['Couleur',['../enumutils_1_1_couleur.html',1,'utils']]],
+  ['couleur_21',['couleur',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a33f87b00a462a82b4ddec759cf6b96f6',1,'affichage.AffichageJavaFX.CouleurOption.couleur'],['../classentites_1_1_pirate.html#a192f11d82dba20ee584d470c708de282',1,'entites.Pirate.couleur']]],
+  ['couleur_22',['Couleur',['../enumutils_1_1_couleur.html#a4c0a9d098f435b417fb10a81fd3eb237',1,'utils::Couleur']]],
+  ['couleur_2ejava_23',['Couleur.java',['../_couleur_8java.html',1,'']]],
+  ['couleuroption_24',['CouleurOption',['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html',1,'affichage.AffichageJavaFX.CouleurOption'],['../classaffichage_1_1_affichage_java_f_x_1_1_couleur_option.html#a08deac6485cbd8e6c976170c16b1df8a',1,'affichage.AffichageJavaFX.CouleurOption.CouleurOption()']]],
+  ['couleursdejachoisies_25',['couleursDejaChoisies',['../classaffichage_1_1_affichage_java_f_x.html#afaa3c58569729859baa43c279d30d381',1,'affichage::AffichageJavaFX']]],
+  ['couleursdisponibles_26',['couleursDisponibles',['../classaffichage_1_1_affichage_terminal.html#a9e624ea428d02304551db4a0fcac9980',1,'affichage::AffichageTerminal']]]
 ];

@@ -3,7 +3,7 @@
   realizations="true" associations="true" dependencies="false" nesting-rel="true" router="FAN">  
   <class id="1" language="java" name="affichage.AffichageJavaFX" project="Les_Pirates" 
     file="/Les_Pirates/src/affichage/AffichageJavaFX.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="241" y="430"/>    
+    <position height="-1" width="-1" x="396" y="436"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="affichage.AffichageJavaFX.CouleurOption" project="Les_Pirates" 
     file="/Les_Pirates/src/affichage/AffichageJavaFX.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="95" y="107"/>    
+    <position height="-1" width="-1" x="158" y="349"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="affichage.AffichageTerminal" project="Les_Pirates" 
     file="/Les_Pirates/src/affichage/AffichageTerminal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="646" y="477"/>    
+    <position height="-1" width="-1" x="709" y="118"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -41,14 +41,14 @@
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <realization id="6">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <nesting id="7">    
+  <nesting id="6">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
   </nesting>  
+  <realization id="7">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
   <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
     sort="true" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="false"/>    

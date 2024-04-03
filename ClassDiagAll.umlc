@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="affichage.AffichageTerminal" project="Les_Pirates" 
     file="/Les_Pirates/src/affichage/AffichageTerminal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="695" y="225"/>    
+    <position height="-1" width="-1" x="743" y="224"/>    
     <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
       accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -155,180 +155,182 @@
     </display>  
   </enumeration>  
   <association id="18">    
+    <bendpoint x="564" y="1112"/>    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="19" name="couleur"/>      
+      <attribute id="19" name="arme"/>      
       <multiplicity id="20" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="21">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <association id="22">    
-    <bendpoint x="1130" y="491"/>    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="23" name="couleursDejaChoisies"/>      
-      <multiplicity id="24" minimum="0" maximum="2147483647"/>    
+  <association id="21">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="22" name="effet"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="25">    
-    <bendpoint x="771" y="491"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="26" name="couleursDisponibles"/>      
-      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="28">    
+  <association id="24">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="29" name="pirateGagnant">        
+      <attribute id="25" name="pirateGagnant">        
         <position height="18" width="76" x="564" y="703"/>      
       </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1"/>    
+      <multiplicity id="26" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="31">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="32" name="piratesDisponibles"/>      
-      <multiplicity id="33" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <bendpoint x="513" y="46"/>    
+  <association id="27">    
+    <bendpoint x="582" y="427"/>    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="35" name="affichage">        
+      <attribute id="28" name="affichage">        
         <position height="18" width="54" x="552" y="-38"/>      
       </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
+      <multiplicity id="29" minimum="0" maximum="1">        
         <position height="16" width="23" x="605" y="-35"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="37">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="38" name="effet"/>      
-      <multiplicity id="39" minimum="0" maximum="1"/>    
+  <association id="30">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="31" name="de"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="41" name="cases"/>      
-      <multiplicity id="42" minimum="0" maximum="2147483647"/>    
+  <association id="33">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="34" name="arme"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <nesting id="43">    
+  <generalization id="36">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <realization id="37">    
     <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="14"/>  
-  </nesting>  
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="38">    
+    <bendpoint x="515" y="481"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="39" name="jeu"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <bendpoint x="1130" y="491"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="42" name="couleursDejaChoisies"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="44">    
-    <end type="SOURCE" refId="14" navigable="false">      
+    <end type="SOURCE" refId="8" navigable="false">      
       <attribute id="45" name="couleur"/>      
       <multiplicity id="46" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <association id="48">    
-    <bendpoint x="489" y="828"/>    
-    <bendpoint x="489" y="1039"/>    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="49" name="arme"/>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
+  <association id="47">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="48" name="piratesDejaChoisis"/>      
+      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="51">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="52" name="jeu"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <realization id="55">    
+  <realization id="50">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="16"/>  
   </realization>  
-  <generalization id="56">    
+  <association id="51">    
+    <bendpoint x="771" y="491"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="52" name="couleursDisponibles">        
+        <position height="18" width="105" x="840" y="543"/>      
+      </attribute>      
+      <multiplicity id="53" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="54">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="11"/>  
   </generalization>  
-  <association id="57">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="58" name="affichage">        
-        <position height="18" width="54" x="435" y="-59"/>      
-      </attribute>      
-      <multiplicity id="59" minimum="0" maximum="1">        
-        <position height="16" width="23" x="494" y="-53"/>      
-      </multiplicity>    
+  <association id="55">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="56" name="piratesDisponibles"/>      
+      <multiplicity id="57" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
+    <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="60">    
+  <association id="58">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="61" name="de"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="63">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="64" name="plateau"/>      
-      <multiplicity id="65" minimum="0" maximum="1"/>    
+      <attribute id="59" name="plateau"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="66">    
+  <association id="61">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="62" name="couleur"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="65" name="cases"/>      
+      <multiplicity id="66" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="67" name="listePirates">        
+      <attribute id="68" name="listePirates">        
         <position height="18" width="60" x="470" y="730"/>      
       </attribute>      
-      <multiplicity id="68" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="69">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="70" name="arme"/>      
-      <multiplicity id="71" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <generalization id="70">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <nesting id="71">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="14"/>  
+  </nesting>  
   <association id="72">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="73" name="piratesDejaChoisis"/>      
-      <multiplicity id="74" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="73" name="affichage">        
+        <position height="18" width="54" x="435" y="-59"/>      
+      </attribute>      
+      <multiplicity id="74" minimum="0" maximum="1">        
+        <position height="16" width="23" x="494" y="-53"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
