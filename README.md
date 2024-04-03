@@ -21,6 +21,8 @@
 
 ## Documentation Technique
 
+Une documentation visuelle à été mise à disposition pour comprendr le projet. Elle comporte Les diagrammes de classe par package et de tout le projet. Il y à aussi un diagramme de séquence et un diagramme de séquence détaillé d'un tour de pirate.
+
 Une documentation technique détaillée a été générée avec Doxygen, offrant une vue approfondie de la structure interne du jeu, des classes, des méthodes et de l'architecture globale. Cette documentation est destinée aux développeurs souhaitant contribuer au projet ou comprendre son fonctionnement en détail.
 
 ### Accéder à la Documentation
