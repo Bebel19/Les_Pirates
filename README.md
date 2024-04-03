@@ -3,7 +3,7 @@
 
 ## Description
 
-"Les Pirates" est un jeu de plateau interactif développé en Java avec JavaFX. Le jeu invite les joueurs à incarner des pirates naviguant à travers des mers dangereuses à la recherche d'un trésor caché. Chaque joueur doit surmonter des obstacles (cases rhum), ramasser des armes (case arme), combattre des adversaires (duels) et atteindre le trésor à la derniere case (case win).
+"La légende Kaïzoku : poudre noire et rhum doré" est un jeu de plateau interactif développé en Java avec JavaFX. Le jeu invite les joueurs à incarner des pirates naviguant à travers des mers dangereuses à la recherche d'un trésor caché. Chaque joueur doit surmonter des obstacles (cases rhum), ramasser des armes (case arme), combattre des adversaires (duels) et atteindre le trésor à la derniere case (case win).
 
 ## Fonctionnalités
 
