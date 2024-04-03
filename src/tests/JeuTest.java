@@ -4,6 +4,7 @@ import affichage.IAffichage;
 import entites.Case;
 import entites.Jeu;
 import entites.Pirate;
+import entites.Plateau;
 import utils.Arme;
 import utils.Couleur;
 import utils.PirateNom;
@@ -85,7 +86,7 @@ public class JeuTest {
 			}
 
 			@Override
-			public void afficherPirates(Pirate[] pirates) {
+			public void afficherPirates(Pirate[] pirates, Plateau plateau) {
 				// TODO Auto-generated method stub
 				
 			}
@@ -175,7 +176,7 @@ public class JeuTest {
 			}
 
 			@Override
-			public void afficherPirates(Pirate[] pirates) {
+			public void afficherPirates(Pirate[] pirates, Plateau plateau) {
 				// TODO Auto-generated method stub
 				
 			}
@@ -264,7 +265,7 @@ public class JeuTest {
 			}
 
 			@Override
-			public void afficherPirates(Pirate[] pirates) {
+			public void afficherPirates(Pirate[] pirates, Plateau plateau) {
 				// TODO Auto-generated method stub
 				
 			}

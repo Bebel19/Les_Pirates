@@ -76,9 +76,9 @@ public interface IAffichage {
 	 */
 	Couleur choisirCouleur();
 
-	void afficherPirates(Pirate[] pirates);
-
+	void afficherPirates(Pirate[] listePirates, Plateau plateau);
 	void affichageDe(Pirate pirate, int lance);
+	
 
 
 

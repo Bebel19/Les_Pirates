@@ -236,7 +236,7 @@ public class AffichageTerminal implements IAffichage {
 	}
 
 	@Override
-	public void afficherPirates(Pirate[] pirates) {
+	public void afficherPirates(Pirate[] pirates,Plateau plateau) {
 		// TODO Auto-generated method stub
 		
 	}

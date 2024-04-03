@@ -144,7 +144,7 @@ public class Jeu {
 
 		Case caseCourante = plateau.getCase(pirate.getPosition());
 		affichage.afficherPosition(pirate, caseCourante);
-
+		affichage.afficherPirates(getPirates(), getPlateau());
 		if (caseCourante != null) {
 			caseCourante.appliquerEffet(pirate, this);
 		}
