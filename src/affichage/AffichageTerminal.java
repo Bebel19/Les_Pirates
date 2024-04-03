@@ -131,7 +131,6 @@ public class AffichageTerminal implements IAffichage {
 	    }
 	    System.out.print("Choisissez un pirate : ");
 	    while (!scanner.hasNextInt()) {
-	        scanner.next(); // Consommer l'entrée non valide
 	        System.out.println("Entrée invalide. Veuillez saisir un nombre entier.");
 	        System.out.print("Choisissez un pirate : ");
 	    }
@@ -226,6 +225,7 @@ public class AffichageTerminal implements IAffichage {
 
 	@Override
 	public void afficherDebutTour(Pirate pirate) {
+		System.out.print("\n");
 		System.out.println("C'est le tour de " + pirate.getNom() + " [" + pirate.getCouleur()
 				+ "]. Il commence son tour sur la case : " + pirate.getPosition() + ".");
 	}
