@@ -39,7 +39,7 @@ Si vous souhaitez générer la dernière version de la documentation à partir d
     doxygen Doxyfile
     ```
 
-    Cette commande générera la documentation dans le dossier spécifié dans votre `Doxyfile`, typiquement `/docs` ou `/doc`.
+    Cette commande générera la documentation dans le dossier spécifié dans votre `Doxyfile`.
 
 
 ## Installation et Exécution
@@ -50,9 +50,12 @@ Clonez le dépôt :
 git clone https://github.com/Bebel19/Les_Pirates.git
 cd Les_Pirates
 
+## Pour la version console (terminal) : 
+java tests.TestStart
+
 ## Pour la version javaFX (beta) :
 java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStartJavaFX
 
-## Pour la version console (terminal) : 
-java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestStart
+## Pour la version javaFX en architecture MVC (Model, Vue, Control) (beta) :
+java --module-path /chemin/vers/javafx-sdk-11/lib --add-modules javafx.controls,javafx.fxml -cp bin tests.TestControleurJavaFX
 ```
