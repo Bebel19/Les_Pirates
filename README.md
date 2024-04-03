@@ -1,5 +1,5 @@
 
-# Les Pirates
+# La légende Kaïzoku : poudre noire et rhum doré
 
 ## Description
 
